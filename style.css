@@ -3,12 +3,26 @@ body {
     transition: background 0.3s ease;
 }
 
+
+/* Mở rộng container */
+.container {
+    max-width: 1200px; /* Có thể tăng lên 1400px hoặc 1600px nếu cần */
+}
+
+/* Giữ card ở chính giữa */
 .profile-card {
+    width: 100%;
+    max-width: 900px; /* Có thể điều chỉnh theo ý muốn */
+    margin: auto;
+}
+
+
+/* .profile-card {
     max-width: 400px;
     margin: auto;
     background: white;
     border-radius: 10px;
-}
+} */
 
 .avatar {
     width: 120px;
