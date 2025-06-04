@@ -1,0 +1,4391 @@
+{
+    "name": "SimplePage",
+    "description": "Kho giao diện Landing Page",
+    "url": "https://builder.simplepage.vn",
+    "home": "https://builder.simplepage.vn",
+    "gmt_offset": "7",
+    "timezone_string": "",
+    "namespaces": ["oembed/1.0", "acoofm/v1", "/jet-elements-api/v1", "wp/v2"],
+    "authentication": [],
+    "routes": {
+        "/": {
+            "namespace": "",
+            "methods": ["GET"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "context": {
+                            "required": false,
+                            "default": "view"
+                        }
+                    }
+                }
+            ],
+            "_links": {
+                "self": [
+                    {
+                        "href": "https://builder.simplepage.vn/wp-json/"
+                    }
+                ]
+            }
+        },
+        "/oembed/1.0": {
+            "namespace": "oembed/1.0",
+            "methods": ["GET"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "namespace": {
+                            "required": false,
+                            "default": "oembed/1.0"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view"
+                        }
+                    }
+                }
+            ],
+            "_links": {
+                "self": [
+                    {
+                        "href": "https://builder.simplepage.vn/wp-json/oembed/1.0"
+                    }
+                ]
+            }
+        },
+        "/oembed/1.0/embed": {
+            "namespace": "oembed/1.0",
+            "methods": ["GET"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "url": {
+                            "required": true
+                        },
+                        "format": {
+                            "required": false,
+                            "default": "json"
+                        },
+                        "maxwidth": {
+                            "required": false,
+                            "default": 600
+                        }
+                    }
+                }
+            ],
+            "_links": {
+                "self": [
+                    {
+                        "href": "https://builder.simplepage.vn/wp-json/oembed/1.0/embed"
+                    }
+                ]
+            }
+        },
+        "/oembed/1.0/proxy": {
+            "namespace": "oembed/1.0",
+            "methods": ["GET"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "url": {
+                            "required": true,
+                            "description": "URL của tài nguyên để lấy dữ liệu oEmbed.",
+                            "type": "string"
+                        },
+                        "format": {
+                            "required": false,
+                            "default": "json",
+                            "enum": ["json", "xml"],
+                            "description": "Định dạng oEmbed để sử dụng.",
+                            "type": "string"
+                        },
+                        "maxwidth": {
+                            "required": false,
+                            "default": 600,
+                            "description": "Chiều rộng tối đa của khung nhúng tính bằng đơn vị pixels.",
+                            "type": "integer"
+                        },
+                        "maxheight": {
+                            "required": false,
+                            "description": "Chiều cao tối đa của khung nhúng tính bằng đơn vị pixels.",
+                            "type": "integer"
+                        },
+                        "discover": {
+                            "required": false,
+                            "default": true,
+                            "description": "Có thực hiện những yêu cầu nhúng oEmbed từ những nhà cũng cấp chưa được xác thực hay không.",
+                            "type": "boolean"
+                        }
+                    }
+                }
+            ],
+            "_links": {
+                "self": [
+                    {
+                        "href": "https://builder.simplepage.vn/wp-json/oembed/1.0/proxy"
+                    }
+                ]
+            }
+        },
+        "/acoofm/v1": {
+            "namespace": "acoofm/v1",
+            "methods": ["GET"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "namespace": {
+                            "required": false,
+                            "default": "acoofm/v1"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view"
+                        }
+                    }
+                }
+            ],
+            "_links": {
+                "self": [
+                    {
+                        "href": "https://builder.simplepage.vn/wp-json/acoofm/v1"
+                    }
+                ]
+            }
+        },
+        "/acoofm/v1/commonSettings": {
+            "namespace": "acoofm/v1",
+            "methods": ["GET"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": []
+                }
+            ],
+            "_links": {
+                "self": [
+                    {
+                        "href": "https://builder.simplepage.vn/wp-json/acoofm/v1/commonSettings"
+                    }
+                ]
+            }
+        },
+        "/acoofm/v1/updateCommonSettings": {
+            "namespace": "acoofm/v1",
+            "methods": ["POST"],
+            "endpoints": [
+                {
+                    "methods": ["POST"],
+                    "args": []
+                }
+            ],
+            "_links": {
+                "self": [
+                    {
+                        "href": "https://builder.simplepage.vn/wp-json/acoofm/v1/updateCommonSettings"
+                    }
+                ]
+            }
+        },
+        "/acoofm/v1/serviceConnect": {
+            "namespace": "acoofm/v1",
+            "methods": ["POST"],
+            "endpoints": [
+                {
+                    "methods": ["POST"],
+                    "args": []
+                }
+            ],
+            "_links": {
+                "self": [
+                    {
+                        "href": "https://builder.simplepage.vn/wp-json/acoofm/v1/serviceConnect"
+                    }
+                ]
+            }
+        },
+        "/acoofm/v1/serviceSave": {
+            "namespace": "acoofm/v1",
+            "methods": ["POST"],
+            "endpoints": [
+                {
+                    "methods": ["POST"],
+                    "args": []
+                }
+            ],
+            "_links": {
+                "self": [
+                    {
+                        "href": "https://builder.simplepage.vn/wp-json/acoofm/v1/serviceSave"
+                    }
+                ]
+            }
+        },
+        "/acoofm/v1/settingsSave": {
+            "namespace": "acoofm/v1",
+            "methods": ["POST"],
+            "endpoints": [
+                {
+                    "methods": ["POST"],
+                    "args": []
+                }
+            ],
+            "_links": {
+                "self": [
+                    {
+                        "href": "https://builder.simplepage.vn/wp-json/acoofm/v1/settingsSave"
+                    }
+                ]
+            }
+        },
+        "/acoofm/v1/settingsReset": {
+            "namespace": "acoofm/v1",
+            "methods": ["POST"],
+            "endpoints": [
+                {
+                    "methods": ["POST"],
+                    "args": []
+                }
+            ],
+            "_links": {
+                "self": [
+                    {
+                        "href": "https://builder.simplepage.vn/wp-json/acoofm/v1/settingsReset"
+                    }
+                ]
+            }
+        },
+        "/acoofm/v1/uploadCredentials": {
+            "namespace": "acoofm/v1",
+            "methods": ["POST"],
+            "endpoints": [
+                {
+                    "methods": ["POST"],
+                    "args": []
+                }
+            ],
+            "_links": {
+                "self": [
+                    {
+                        "href": "https://builder.simplepage.vn/wp-json/acoofm/v1/uploadCredentials"
+                    }
+                ]
+            }
+        },
+        "//jet-elements-api/v1": {
+            "namespace": "/jet-elements-api/v1",
+            "methods": ["GET"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "namespace": {
+                            "required": false,
+                            "default": "/jet-elements-api/v1"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view"
+                        }
+                    }
+                }
+            ],
+            "_links": {
+                "self": [
+                    {
+                        "href": "https://builder.simplepage.vn/wp-json/jet-elements-api/v1"
+                    }
+                ]
+            }
+        },
+        "/jet-elements-api/v1/elementor-template": {
+            "namespace": "/jet-elements-api/v1",
+            "methods": ["GET"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "id": {
+                            "required": false,
+                            "default": ""
+                        },
+                        "dev": {
+                            "required": false,
+                            "default": "false"
+                        }
+                    }
+                }
+            ],
+            "_links": {
+                "self": [
+                    {
+                        "href": "https://builder.simplepage.vn/wp-json/jet-elements-api/v1/elementor-template"
+                    }
+                ]
+            }
+        },
+        "/jet-elements-api/v1/plugin-settings": {
+            "namespace": "/jet-elements-api/v1",
+            "methods": ["POST"],
+            "endpoints": [
+                {
+                    "methods": ["POST"],
+                    "args": []
+                }
+            ],
+            "_links": {
+                "self": [
+                    {
+                        "href": "https://builder.simplepage.vn/wp-json/jet-elements-api/v1/plugin-settings"
+                    }
+                ]
+            }
+        },
+        "/wp/v2": {
+            "namespace": "wp/v2",
+            "methods": ["GET"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "namespace": {
+                            "required": false,
+                            "default": "wp/v2"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view"
+                        }
+                    }
+                }
+            ],
+            "_links": {
+                "self": [
+                    {
+                        "href": "https://builder.simplepage.vn/wp-json/wp/v2"
+                    }
+                ]
+            }
+        },
+        "/wp/v2/posts": {
+            "namespace": "wp/v2",
+            "methods": ["GET", "POST"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["view", "embed", "edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        },
+                        "page": {
+                            "required": false,
+                            "default": 1,
+                            "description": "Trang hiện tại của bộ sưu tập.",
+                            "type": "integer"
+                        },
+                        "per_page": {
+                            "required": false,
+                            "default": 10,
+                            "description": "Số lượng kết quả được trả về một lần.",
+                            "type": "integer"
+                        },
+                        "search": {
+                            "required": false,
+                            "description": "Giới hạn kết quả phù hợp trong một chuỗi.",
+                            "type": "string"
+                        },
+                        "after": {
+                            "required": false,
+                            "description": "Giới hạn response trả về chỉ gồm bài viết xuất bản sau một ngày (định dạng ISO8601) cụ thể.",
+                            "type": "string"
+                        },
+                        "author": {
+                            "required": false,
+                            "default": [],
+                            "description": "Giới hạn kết quả là các bài viết của các tác giả cụ thể.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "author_exclude": {
+                            "required": false,
+                            "default": [],
+                            "description": "Đảm bảo rằng kết quả đã loại bỏ những bài viết của các tác giả cụ thể.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "before": {
+                            "required": false,
+                            "description": "Giới hạn response chỉ bao gồm những bài viết được xuất bản trước một ngày tháng (định dạng ISO8601) cụ thể.",
+                            "type": "string"
+                        },
+                        "exclude": {
+                            "required": false,
+                            "default": [],
+                            "description": "Chắc chắn kết quả loại trừ những ID cố định.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "include": {
+                            "required": false,
+                            "default": [],
+                            "description": "Giới hạn kết quả chỉ những ID cố định.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "offset": {
+                            "required": false,
+                            "description": "Offset kết quả được thiết lập bởi một số lượng cụ thể.",
+                            "type": "integer"
+                        },
+                        "order": {
+                            "required": false,
+                            "default": "desc",
+                            "enum": ["asc", "desc"],
+                            "description": "Sắp xếp thuộc tính tăng dần hoặc giảm dần.",
+                            "type": "string"
+                        },
+                        "orderby": {
+                            "required": false,
+                            "default": "date",
+                            "enum": ["author", "date", "id", "include", "modified", "parent", "relevance", "slug", "include_slugs", "title"],
+                            "description": "Sắp xếp danh sách bằng thuộc tính của đối tượng.",
+                            "type": "string"
+                        },
+                        "slug": {
+                            "required": false,
+                            "description": "Giới hạn kết quả thiết lập cho bài viết với một hoặc nhiều đường dẫn cụ thể.",
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "status": {
+                            "required": false,
+                            "default": "publish",
+                            "description": "Giới hạn kết quả cho các bài viết được gán một hoặc nhiều trạng thái.",
+                            "type": "array",
+                            "items": {
+                                "enum": [
+                                    "publish",
+                                    "future",
+                                    "draft",
+                                    "pending",
+                                    "private",
+                                    "trash",
+                                    "auto-draft",
+                                    "inherit",
+                                    "request-pending",
+                                    "request-confirmed",
+                                    "request-failed",
+                                    "request-completed",
+                                    "any"
+                                ],
+                                "type": "string"
+                            }
+                        },
+                        "tax_relation": {
+                            "required": false,
+                            "enum": ["AND", "OR"],
+                            "description": "Limit result set based on relationship between multiple taxonomies.",
+                            "type": "string"
+                        },
+                        "categories": {
+                            "required": false,
+                            "default": [],
+                            "description": "Giới hạn kết quả gồm tất cả bài viết có term thuộc taxonomy categories.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "categories_exclude": {
+                            "required": false,
+                            "default": [],
+                            "description": "Giới hạn kết quả cho tất cả các mục ngoại trừ term gán trong taxonomy categories.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "tags": {
+                            "required": false,
+                            "default": [],
+                            "description": "Giới hạn kết quả gồm tất cả bài viết có term thuộc taxonomy tags.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "tags_exclude": {
+                            "required": false,
+                            "default": [],
+                            "description": "Giới hạn kết quả cho tất cả các mục ngoại trừ term gán trong taxonomy tags.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "sticky": {
+                            "required": false,
+                            "description": "Giới hạn kết quả gồm những bài viết được sticky.",
+                            "type": "boolean"
+                        }
+                    }
+                },
+                {
+                    "methods": ["POST"],
+                    "args": {
+                        "date": {
+                            "required": false,
+                            "description": "Ngày đối tượng được xuất bản, theo múi giờ của trang web.",
+                            "type": ["string", "null"]
+                        },
+                        "date_gmt": {
+                            "required": false,
+                            "description": "Ngày đối tượng được xuất bản, theo giờ GMT.",
+                            "type": ["string", "null"]
+                        },
+                        "slug": {
+                            "required": false,
+                            "description": "Một ID bằng chữ và số cho đối tượng.",
+                            "type": "string"
+                        },
+                        "status": {
+                            "required": false,
+                            "enum": ["publish", "future", "draft", "pending", "private"],
+                            "description": "Một trạng thái định danh cho đối tượng.",
+                            "type": "string"
+                        },
+                        "password": {
+                            "required": false,
+                            "description": "Mật khẩu để bảo mật truy cập đến nội dung và tóm tắt.",
+                            "type": "string"
+                        },
+                        "title": {
+                            "required": false,
+                            "description": "Tiêu đề cho đối tượng.",
+                            "type": "object"
+                        },
+                        "content": {
+                            "required": false,
+                            "description": "Nội dung cho đối tượng.",
+                            "type": "object"
+                        },
+                        "author": {
+                            "required": false,
+                            "description": "ID cho tác giả của đối tượng.",
+                            "type": "integer"
+                        },
+                        "excerpt": {
+                            "required": false,
+                            "description": "Đoạn trích cho đối tượng.",
+                            "type": "object"
+                        },
+                        "featured_media": {
+                            "required": false,
+                            "description": "ID của ảnh đại diện cho đối tượng.",
+                            "type": "integer"
+                        },
+                        "comment_status": {
+                            "required": false,
+                            "enum": ["open", "closed"],
+                            "description": "Bình luận được mở cho đối tượng hay không.",
+                            "type": "string"
+                        },
+                        "ping_status": {
+                            "required": false,
+                            "enum": ["open", "closed"],
+                            "description": "Liệu đối tượng có thể được ping hay không.",
+                            "type": "string"
+                        },
+                        "format": {
+                            "required": false,
+                            "enum": ["standard", "aside", "chat", "gallery", "link", "image", "quote", "status", "video", "audio"],
+                            "description": "Định dạng cho đối tượng.",
+                            "type": "string"
+                        },
+                        "meta": {
+                            "required": false,
+                            "description": "Các trường meta.",
+                            "type": "object"
+                        },
+                        "sticky": {
+                            "required": false,
+                            "description": "Có xem đối tượng là sticky hay không.",
+                            "type": "boolean"
+                        },
+                        "template": {
+                            "required": false,
+                            "description": "Các tập tin của giao diện sử dụng để hiển thị các đối tượng.",
+                            "type": "string"
+                        },
+                        "categories": {
+                            "required": false,
+                            "description": "Các term được gán cho một đối tượng của taxonomy category.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "tags": {
+                            "required": false,
+                            "description": "Các term được gán cho một đối tượng của taxonomy post_tag.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        }
+                    }
+                }
+            ],
+            "_links": {
+                "self": [
+                    {
+                        "href": "https://builder.simplepage.vn/wp-json/wp/v2/posts"
+                    }
+                ]
+            }
+        },
+        "/wp/v2/posts/(?P\u003Cid\u003E[\\d]+)": {
+            "namespace": "wp/v2",
+            "methods": ["GET", "POST", "PUT", "PATCH", "DELETE"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "id": {
+                            "required": false,
+                            "description": "ID cho đối tượng.",
+                            "type": "integer"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["view", "embed", "edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        },
+                        "password": {
+                            "required": false,
+                            "description": "Mật khẩu của bài viết đó nếu nó được bảo vệ.",
+                            "type": "string"
+                        }
+                    }
+                },
+                {
+                    "methods": ["POST", "PUT", "PATCH"],
+                    "args": {
+                        "id": {
+                            "required": false,
+                            "description": "ID cho đối tượng.",
+                            "type": "integer"
+                        },
+                        "date": {
+                            "required": false,
+                            "description": "Ngày đối tượng được xuất bản, theo múi giờ của trang web.",
+                            "type": ["string", "null"]
+                        },
+                        "date_gmt": {
+                            "required": false,
+                            "description": "Ngày đối tượng được xuất bản, theo giờ GMT.",
+                            "type": ["string", "null"]
+                        },
+                        "slug": {
+                            "required": false,
+                            "description": "Một ID bằng chữ và số cho đối tượng.",
+                            "type": "string"
+                        },
+                        "status": {
+                            "required": false,
+                            "enum": ["publish", "future", "draft", "pending", "private"],
+                            "description": "Một trạng thái định danh cho đối tượng.",
+                            "type": "string"
+                        },
+                        "password": {
+                            "required": false,
+                            "description": "Mật khẩu để bảo mật truy cập đến nội dung và tóm tắt.",
+                            "type": "string"
+                        },
+                        "title": {
+                            "required": false,
+                            "description": "Tiêu đề cho đối tượng.",
+                            "type": "object"
+                        },
+                        "content": {
+                            "required": false,
+                            "description": "Nội dung cho đối tượng.",
+                            "type": "object"
+                        },
+                        "author": {
+                            "required": false,
+                            "description": "ID cho tác giả của đối tượng.",
+                            "type": "integer"
+                        },
+                        "excerpt": {
+                            "required": false,
+                            "description": "Đoạn trích cho đối tượng.",
+                            "type": "object"
+                        },
+                        "featured_media": {
+                            "required": false,
+                            "description": "ID của ảnh đại diện cho đối tượng.",
+                            "type": "integer"
+                        },
+                        "comment_status": {
+                            "required": false,
+                            "enum": ["open", "closed"],
+                            "description": "Bình luận được mở cho đối tượng hay không.",
+                            "type": "string"
+                        },
+                        "ping_status": {
+                            "required": false,
+                            "enum": ["open", "closed"],
+                            "description": "Liệu đối tượng có thể được ping hay không.",
+                            "type": "string"
+                        },
+                        "format": {
+                            "required": false,
+                            "enum": ["standard", "aside", "chat", "gallery", "link", "image", "quote", "status", "video", "audio"],
+                            "description": "Định dạng cho đối tượng.",
+                            "type": "string"
+                        },
+                        "meta": {
+                            "required": false,
+                            "description": "Các trường meta.",
+                            "type": "object"
+                        },
+                        "sticky": {
+                            "required": false,
+                            "description": "Có xem đối tượng là sticky hay không.",
+                            "type": "boolean"
+                        },
+                        "template": {
+                            "required": false,
+                            "description": "Các tập tin của giao diện sử dụng để hiển thị các đối tượng.",
+                            "type": "string"
+                        },
+                        "categories": {
+                            "required": false,
+                            "description": "Các term được gán cho một đối tượng của taxonomy category.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "tags": {
+                            "required": false,
+                            "description": "Các term được gán cho một đối tượng của taxonomy post_tag.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        }
+                    }
+                },
+                {
+                    "methods": ["DELETE"],
+                    "args": {
+                        "id": {
+                            "required": false,
+                            "description": "ID cho đối tượng.",
+                            "type": "integer"
+                        },
+                        "force": {
+                            "required": false,
+                            "default": false,
+                            "description": "Whether to bypass Trash and force deletion.",
+                            "type": "boolean"
+                        }
+                    }
+                }
+            ]
+        },
+        "/wp/v2/posts/(?P\u003Cparent\u003E[\\d]+)/revisions": {
+            "namespace": "wp/v2",
+            "methods": ["GET"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "parent": {
+                            "required": false,
+                            "description": "ID cha của đối tượng.",
+                            "type": "integer"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["view", "embed", "edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        },
+                        "page": {
+                            "required": false,
+                            "default": 1,
+                            "description": "Trang hiện tại của bộ sưu tập.",
+                            "type": "integer"
+                        },
+                        "per_page": {
+                            "required": false,
+                            "description": "Số lượng kết quả được trả về một lần.",
+                            "type": "integer"
+                        },
+                        "search": {
+                            "required": false,
+                            "description": "Giới hạn kết quả phù hợp trong một chuỗi.",
+                            "type": "string"
+                        },
+                        "exclude": {
+                            "required": false,
+                            "default": [],
+                            "description": "Chắc chắn kết quả loại trừ những ID cố định.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "include": {
+                            "required": false,
+                            "default": [],
+                            "description": "Giới hạn kết quả chỉ những ID cố định.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "offset": {
+                            "required": false,
+                            "description": "Offset kết quả được thiết lập bởi một số lượng cụ thể.",
+                            "type": "integer"
+                        },
+                        "order": {
+                            "required": false,
+                            "default": "desc",
+                            "enum": ["asc", "desc"],
+                            "description": "Sắp xếp thuộc tính tăng dần hoặc giảm dần.",
+                            "type": "string"
+                        },
+                        "orderby": {
+                            "required": false,
+                            "default": "date",
+                            "enum": ["date", "id", "include", "relevance", "slug", "include_slugs", "title"],
+                            "description": "Sắp xếp danh sách bằng thuộc tính của đối tượng.",
+                            "type": "string"
+                        }
+                    }
+                }
+            ]
+        },
+        "/wp/v2/posts/(?P\u003Cparent\u003E[\\d]+)/revisions/(?P\u003Cid\u003E[\\d]+)": {
+            "namespace": "wp/v2",
+            "methods": ["GET", "DELETE"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "parent": {
+                            "required": false,
+                            "description": "ID cha của đối tượng.",
+                            "type": "integer"
+                        },
+                        "id": {
+                            "required": false,
+                            "description": "ID cho đối tượng.",
+                            "type": "integer"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["view", "embed", "edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        }
+                    }
+                },
+                {
+                    "methods": ["DELETE"],
+                    "args": {
+                        "parent": {
+                            "required": false,
+                            "description": "ID cha của đối tượng.",
+                            "type": "integer"
+                        },
+                        "id": {
+                            "required": false,
+                            "description": "ID cho đối tượng.",
+                            "type": "integer"
+                        },
+                        "force": {
+                            "required": false,
+                            "default": false,
+                            "description": "Yêu cầu phải đúng, các bản duyệt lại không thể bị xóa",
+                            "type": "boolean"
+                        }
+                    }
+                }
+            ]
+        },
+        "/wp/v2/posts/(?P\u003Cid\u003E[\\d]+)/autosaves": {
+            "namespace": "wp/v2",
+            "methods": ["GET", "POST"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "parent": {
+                            "required": false,
+                            "description": "ID cha của đối tượng.",
+                            "type": "integer"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["view", "embed", "edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        }
+                    }
+                },
+                {
+                    "methods": ["POST"],
+                    "args": {
+                        "parent": {
+                            "required": false,
+                            "description": "ID cha của đối tượng.",
+                            "type": "integer"
+                        },
+                        "date": {
+                            "required": false,
+                            "description": "Ngày đối tượng được xuất bản, theo múi giờ của trang web.",
+                            "type": ["string", "null"]
+                        },
+                        "date_gmt": {
+                            "required": false,
+                            "description": "Ngày đối tượng được xuất bản, theo giờ GMT.",
+                            "type": ["string", "null"]
+                        },
+                        "slug": {
+                            "required": false,
+                            "description": "Một ID bằng chữ và số cho đối tượng.",
+                            "type": "string"
+                        },
+                        "status": {
+                            "required": false,
+                            "enum": ["publish", "future", "draft", "pending", "private"],
+                            "description": "Một trạng thái định danh cho đối tượng.",
+                            "type": "string"
+                        },
+                        "password": {
+                            "required": false,
+                            "description": "Mật khẩu để bảo mật truy cập đến nội dung và tóm tắt.",
+                            "type": "string"
+                        },
+                        "title": {
+                            "required": false,
+                            "description": "Tiêu đề cho đối tượng.",
+                            "type": "object"
+                        },
+                        "content": {
+                            "required": false,
+                            "description": "Nội dung cho đối tượng.",
+                            "type": "object"
+                        },
+                        "author": {
+                            "required": false,
+                            "description": "ID cho tác giả của đối tượng.",
+                            "type": "integer"
+                        },
+                        "excerpt": {
+                            "required": false,
+                            "description": "Đoạn trích cho đối tượng.",
+                            "type": "object"
+                        },
+                        "featured_media": {
+                            "required": false,
+                            "description": "ID của ảnh đại diện cho đối tượng.",
+                            "type": "integer"
+                        },
+                        "comment_status": {
+                            "required": false,
+                            "enum": ["open", "closed"],
+                            "description": "Bình luận được mở cho đối tượng hay không.",
+                            "type": "string"
+                        },
+                        "ping_status": {
+                            "required": false,
+                            "enum": ["open", "closed"],
+                            "description": "Liệu đối tượng có thể được ping hay không.",
+                            "type": "string"
+                        },
+                        "format": {
+                            "required": false,
+                            "enum": ["standard", "aside", "chat", "gallery", "link", "image", "quote", "status", "video", "audio"],
+                            "description": "Định dạng cho đối tượng.",
+                            "type": "string"
+                        },
+                        "meta": {
+                            "required": false,
+                            "description": "Các trường meta.",
+                            "type": "object"
+                        },
+                        "sticky": {
+                            "required": false,
+                            "description": "Có xem đối tượng là sticky hay không.",
+                            "type": "boolean"
+                        },
+                        "template": {
+                            "required": false,
+                            "description": "Các tập tin của giao diện sử dụng để hiển thị các đối tượng.",
+                            "type": "string"
+                        },
+                        "categories": {
+                            "required": false,
+                            "description": "Các term được gán cho một đối tượng của taxonomy category.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "tags": {
+                            "required": false,
+                            "description": "Các term được gán cho một đối tượng của taxonomy post_tag.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "/wp/v2/posts/(?P\u003Cparent\u003E[\\d]+)/autosaves/(?P\u003Cid\u003E[\\d]+)": {
+            "namespace": "wp/v2",
+            "methods": ["GET"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "parent": {
+                            "required": false,
+                            "description": "ID cha của đối tượng.",
+                            "type": "integer"
+                        },
+                        "id": {
+                            "required": false,
+                            "description": "ID cho đối tượng.",
+                            "type": "integer"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["view", "embed", "edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        }
+                    }
+                }
+            ]
+        },
+        "/wp/v2/pages": {
+            "namespace": "wp/v2",
+            "methods": ["GET", "POST"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["view", "embed", "edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        },
+                        "page": {
+                            "required": false,
+                            "default": 1,
+                            "description": "Trang hiện tại của bộ sưu tập.",
+                            "type": "integer"
+                        },
+                        "per_page": {
+                            "required": false,
+                            "default": 10,
+                            "description": "Số lượng kết quả được trả về một lần.",
+                            "type": "integer"
+                        },
+                        "search": {
+                            "required": false,
+                            "description": "Giới hạn kết quả phù hợp trong một chuỗi.",
+                            "type": "string"
+                        },
+                        "after": {
+                            "required": false,
+                            "description": "Giới hạn response trả về chỉ gồm bài viết xuất bản sau một ngày (định dạng ISO8601) cụ thể.",
+                            "type": "string"
+                        },
+                        "author": {
+                            "required": false,
+                            "default": [],
+                            "description": "Giới hạn kết quả là các bài viết của các tác giả cụ thể.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "author_exclude": {
+                            "required": false,
+                            "default": [],
+                            "description": "Đảm bảo rằng kết quả đã loại bỏ những bài viết của các tác giả cụ thể.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "before": {
+                            "required": false,
+                            "description": "Giới hạn response chỉ bao gồm những bài viết được xuất bản trước một ngày tháng (định dạng ISO8601) cụ thể.",
+                            "type": "string"
+                        },
+                        "exclude": {
+                            "required": false,
+                            "default": [],
+                            "description": "Chắc chắn kết quả loại trừ những ID cố định.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "include": {
+                            "required": false,
+                            "default": [],
+                            "description": "Giới hạn kết quả chỉ những ID cố định.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "menu_order": {
+                            "required": false,
+                            "description": "Giới hạn kết quả cho bài viết có giá trị menu_order cụ thể.",
+                            "type": "integer"
+                        },
+                        "offset": {
+                            "required": false,
+                            "description": "Offset kết quả được thiết lập bởi một số lượng cụ thể.",
+                            "type": "integer"
+                        },
+                        "order": {
+                            "required": false,
+                            "default": "desc",
+                            "enum": ["asc", "desc"],
+                            "description": "Sắp xếp thuộc tính tăng dần hoặc giảm dần.",
+                            "type": "string"
+                        },
+                        "orderby": {
+                            "required": false,
+                            "default": "date",
+                            "enum": ["author", "date", "id", "include", "modified", "parent", "relevance", "slug", "include_slugs", "title", "menu_order"],
+                            "description": "Sắp xếp danh sách bằng thuộc tính của đối tượng.",
+                            "type": "string"
+                        },
+                        "parent": {
+                            "required": false,
+                            "default": [],
+                            "description": "Giới hạn kết quả cho những bài viết thuộc về những ID cha cụ thể.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "parent_exclude": {
+                            "required": false,
+                            "default": [],
+                            "description": "Giới hạn kết quả trừ những bài viết không thuộc về một ID cha cụ thể.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "slug": {
+                            "required": false,
+                            "description": "Giới hạn kết quả thiết lập cho bài viết với một hoặc nhiều đường dẫn cụ thể.",
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "status": {
+                            "required": false,
+                            "default": "publish",
+                            "description": "Giới hạn kết quả cho các bài viết được gán một hoặc nhiều trạng thái.",
+                            "type": "array",
+                            "items": {
+                                "enum": [
+                                    "publish",
+                                    "future",
+                                    "draft",
+                                    "pending",
+                                    "private",
+                                    "trash",
+                                    "auto-draft",
+                                    "inherit",
+                                    "request-pending",
+                                    "request-confirmed",
+                                    "request-failed",
+                                    "request-completed",
+                                    "any"
+                                ],
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                {
+                    "methods": ["POST"],
+                    "args": {
+                        "date": {
+                            "required": false,
+                            "description": "Ngày đối tượng được xuất bản, theo múi giờ của trang web.",
+                            "type": ["string", "null"]
+                        },
+                        "date_gmt": {
+                            "required": false,
+                            "description": "Ngày đối tượng được xuất bản, theo giờ GMT.",
+                            "type": ["string", "null"]
+                        },
+                        "slug": {
+                            "required": false,
+                            "description": "Một ID bằng chữ và số cho đối tượng.",
+                            "type": "string"
+                        },
+                        "status": {
+                            "required": false,
+                            "enum": ["publish", "future", "draft", "pending", "private"],
+                            "description": "Một trạng thái định danh cho đối tượng.",
+                            "type": "string"
+                        },
+                        "password": {
+                            "required": false,
+                            "description": "Mật khẩu để bảo mật truy cập đến nội dung và tóm tắt.",
+                            "type": "string"
+                        },
+                        "parent": {
+                            "required": false,
+                            "description": "ID cha của đối tượng.",
+                            "type": "integer"
+                        },
+                        "title": {
+                            "required": false,
+                            "description": "Tiêu đề cho đối tượng.",
+                            "type": "object"
+                        },
+                        "content": {
+                            "required": false,
+                            "description": "Nội dung cho đối tượng.",
+                            "type": "object"
+                        },
+                        "author": {
+                            "required": false,
+                            "description": "ID cho tác giả của đối tượng.",
+                            "type": "integer"
+                        },
+                        "excerpt": {
+                            "required": false,
+                            "description": "Đoạn trích cho đối tượng.",
+                            "type": "object"
+                        },
+                        "featured_media": {
+                            "required": false,
+                            "description": "ID của ảnh đại diện cho đối tượng.",
+                            "type": "integer"
+                        },
+                        "comment_status": {
+                            "required": false,
+                            "enum": ["open", "closed"],
+                            "description": "Bình luận được mở cho đối tượng hay không.",
+                            "type": "string"
+                        },
+                        "ping_status": {
+                            "required": false,
+                            "enum": ["open", "closed"],
+                            "description": "Liệu đối tượng có thể được ping hay không.",
+                            "type": "string"
+                        },
+                        "menu_order": {
+                            "required": false,
+                            "description": "Thứ tự của đối tượng trong sự tương quan với đối tượng khác cùng loại.",
+                            "type": "integer"
+                        },
+                        "meta": {
+                            "required": false,
+                            "description": "Các trường meta.",
+                            "type": "object"
+                        },
+                        "template": {
+                            "required": false,
+                            "description": "Các tập tin của giao diện sử dụng để hiển thị các đối tượng.",
+                            "type": "string"
+                        }
+                    }
+                }
+            ],
+            "_links": {
+                "self": [
+                    {
+                        "href": "https://builder.simplepage.vn/wp-json/wp/v2/pages"
+                    }
+                ]
+            }
+        },
+        "/wp/v2/pages/(?P\u003Cid\u003E[\\d]+)": {
+            "namespace": "wp/v2",
+            "methods": ["GET", "POST", "PUT", "PATCH", "DELETE"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "id": {
+                            "required": false,
+                            "description": "ID cho đối tượng.",
+                            "type": "integer"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["view", "embed", "edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        },
+                        "password": {
+                            "required": false,
+                            "description": "Mật khẩu của bài viết đó nếu nó được bảo vệ.",
+                            "type": "string"
+                        }
+                    }
+                },
+                {
+                    "methods": ["POST", "PUT", "PATCH"],
+                    "args": {
+                        "id": {
+                            "required": false,
+                            "description": "ID cho đối tượng.",
+                            "type": "integer"
+                        },
+                        "date": {
+                            "required": false,
+                            "description": "Ngày đối tượng được xuất bản, theo múi giờ của trang web.",
+                            "type": ["string", "null"]
+                        },
+                        "date_gmt": {
+                            "required": false,
+                            "description": "Ngày đối tượng được xuất bản, theo giờ GMT.",
+                            "type": ["string", "null"]
+                        },
+                        "slug": {
+                            "required": false,
+                            "description": "Một ID bằng chữ và số cho đối tượng.",
+                            "type": "string"
+                        },
+                        "status": {
+                            "required": false,
+                            "enum": ["publish", "future", "draft", "pending", "private"],
+                            "description": "Một trạng thái định danh cho đối tượng.",
+                            "type": "string"
+                        },
+                        "password": {
+                            "required": false,
+                            "description": "Mật khẩu để bảo mật truy cập đến nội dung và tóm tắt.",
+                            "type": "string"
+                        },
+                        "parent": {
+                            "required": false,
+                            "description": "ID cha của đối tượng.",
+                            "type": "integer"
+                        },
+                        "title": {
+                            "required": false,
+                            "description": "Tiêu đề cho đối tượng.",
+                            "type": "object"
+                        },
+                        "content": {
+                            "required": false,
+                            "description": "Nội dung cho đối tượng.",
+                            "type": "object"
+                        },
+                        "author": {
+                            "required": false,
+                            "description": "ID cho tác giả của đối tượng.",
+                            "type": "integer"
+                        },
+                        "excerpt": {
+                            "required": false,
+                            "description": "Đoạn trích cho đối tượng.",
+                            "type": "object"
+                        },
+                        "featured_media": {
+                            "required": false,
+                            "description": "ID của ảnh đại diện cho đối tượng.",
+                            "type": "integer"
+                        },
+                        "comment_status": {
+                            "required": false,
+                            "enum": ["open", "closed"],
+                            "description": "Bình luận được mở cho đối tượng hay không.",
+                            "type": "string"
+                        },
+                        "ping_status": {
+                            "required": false,
+                            "enum": ["open", "closed"],
+                            "description": "Liệu đối tượng có thể được ping hay không.",
+                            "type": "string"
+                        },
+                        "menu_order": {
+                            "required": false,
+                            "description": "Thứ tự của đối tượng trong sự tương quan với đối tượng khác cùng loại.",
+                            "type": "integer"
+                        },
+                        "meta": {
+                            "required": false,
+                            "description": "Các trường meta.",
+                            "type": "object"
+                        },
+                        "template": {
+                            "required": false,
+                            "description": "Các tập tin của giao diện sử dụng để hiển thị các đối tượng.",
+                            "type": "string"
+                        }
+                    }
+                },
+                {
+                    "methods": ["DELETE"],
+                    "args": {
+                        "id": {
+                            "required": false,
+                            "description": "ID cho đối tượng.",
+                            "type": "integer"
+                        },
+                        "force": {
+                            "required": false,
+                            "default": false,
+                            "description": "Whether to bypass Trash and force deletion.",
+                            "type": "boolean"
+                        }
+                    }
+                }
+            ]
+        },
+        "/wp/v2/pages/(?P\u003Cparent\u003E[\\d]+)/revisions": {
+            "namespace": "wp/v2",
+            "methods": ["GET"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "parent": {
+                            "required": false,
+                            "description": "ID cha của đối tượng.",
+                            "type": "integer"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["view", "embed", "edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        },
+                        "page": {
+                            "required": false,
+                            "default": 1,
+                            "description": "Trang hiện tại của bộ sưu tập.",
+                            "type": "integer"
+                        },
+                        "per_page": {
+                            "required": false,
+                            "description": "Số lượng kết quả được trả về một lần.",
+                            "type": "integer"
+                        },
+                        "search": {
+                            "required": false,
+                            "description": "Giới hạn kết quả phù hợp trong một chuỗi.",
+                            "type": "string"
+                        },
+                        "exclude": {
+                            "required": false,
+                            "default": [],
+                            "description": "Chắc chắn kết quả loại trừ những ID cố định.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "include": {
+                            "required": false,
+                            "default": [],
+                            "description": "Giới hạn kết quả chỉ những ID cố định.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "offset": {
+                            "required": false,
+                            "description": "Offset kết quả được thiết lập bởi một số lượng cụ thể.",
+                            "type": "integer"
+                        },
+                        "order": {
+                            "required": false,
+                            "default": "desc",
+                            "enum": ["asc", "desc"],
+                            "description": "Sắp xếp thuộc tính tăng dần hoặc giảm dần.",
+                            "type": "string"
+                        },
+                        "orderby": {
+                            "required": false,
+                            "default": "date",
+                            "enum": ["date", "id", "include", "relevance", "slug", "include_slugs", "title"],
+                            "description": "Sắp xếp danh sách bằng thuộc tính của đối tượng.",
+                            "type": "string"
+                        }
+                    }
+                }
+            ]
+        },
+        "/wp/v2/pages/(?P\u003Cparent\u003E[\\d]+)/revisions/(?P\u003Cid\u003E[\\d]+)": {
+            "namespace": "wp/v2",
+            "methods": ["GET", "DELETE"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "parent": {
+                            "required": false,
+                            "description": "ID cha của đối tượng.",
+                            "type": "integer"
+                        },
+                        "id": {
+                            "required": false,
+                            "description": "ID cho đối tượng.",
+                            "type": "integer"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["view", "embed", "edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        }
+                    }
+                },
+                {
+                    "methods": ["DELETE"],
+                    "args": {
+                        "parent": {
+                            "required": false,
+                            "description": "ID cha của đối tượng.",
+                            "type": "integer"
+                        },
+                        "id": {
+                            "required": false,
+                            "description": "ID cho đối tượng.",
+                            "type": "integer"
+                        },
+                        "force": {
+                            "required": false,
+                            "default": false,
+                            "description": "Yêu cầu phải đúng, các bản duyệt lại không thể bị xóa",
+                            "type": "boolean"
+                        }
+                    }
+                }
+            ]
+        },
+        "/wp/v2/pages/(?P\u003Cid\u003E[\\d]+)/autosaves": {
+            "namespace": "wp/v2",
+            "methods": ["GET", "POST"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "parent": {
+                            "required": false,
+                            "description": "ID cha của đối tượng.",
+                            "type": "integer"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["view", "embed", "edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        }
+                    }
+                },
+                {
+                    "methods": ["POST"],
+                    "args": {
+                        "parent": {
+                            "required": false,
+                            "description": "ID cha của đối tượng.",
+                            "type": "integer"
+                        },
+                        "date": {
+                            "required": false,
+                            "description": "Ngày đối tượng được xuất bản, theo múi giờ của trang web.",
+                            "type": ["string", "null"]
+                        },
+                        "date_gmt": {
+                            "required": false,
+                            "description": "Ngày đối tượng được xuất bản, theo giờ GMT.",
+                            "type": ["string", "null"]
+                        },
+                        "slug": {
+                            "required": false,
+                            "description": "Một ID bằng chữ và số cho đối tượng.",
+                            "type": "string"
+                        },
+                        "status": {
+                            "required": false,
+                            "enum": ["publish", "future", "draft", "pending", "private"],
+                            "description": "Một trạng thái định danh cho đối tượng.",
+                            "type": "string"
+                        },
+                        "password": {
+                            "required": false,
+                            "description": "Mật khẩu để bảo mật truy cập đến nội dung và tóm tắt.",
+                            "type": "string"
+                        },
+                        "title": {
+                            "required": false,
+                            "description": "Tiêu đề cho đối tượng.",
+                            "type": "object"
+                        },
+                        "content": {
+                            "required": false,
+                            "description": "Nội dung cho đối tượng.",
+                            "type": "object"
+                        },
+                        "author": {
+                            "required": false,
+                            "description": "ID cho tác giả của đối tượng.",
+                            "type": "integer"
+                        },
+                        "excerpt": {
+                            "required": false,
+                            "description": "Đoạn trích cho đối tượng.",
+                            "type": "object"
+                        },
+                        "featured_media": {
+                            "required": false,
+                            "description": "ID của ảnh đại diện cho đối tượng.",
+                            "type": "integer"
+                        },
+                        "comment_status": {
+                            "required": false,
+                            "enum": ["open", "closed"],
+                            "description": "Bình luận được mở cho đối tượng hay không.",
+                            "type": "string"
+                        },
+                        "ping_status": {
+                            "required": false,
+                            "enum": ["open", "closed"],
+                            "description": "Liệu đối tượng có thể được ping hay không.",
+                            "type": "string"
+                        },
+                        "menu_order": {
+                            "required": false,
+                            "description": "Thứ tự của đối tượng trong sự tương quan với đối tượng khác cùng loại.",
+                            "type": "integer"
+                        },
+                        "meta": {
+                            "required": false,
+                            "description": "Các trường meta.",
+                            "type": "object"
+                        },
+                        "template": {
+                            "required": false,
+                            "description": "Các tập tin của giao diện sử dụng để hiển thị các đối tượng.",
+                            "type": "string"
+                        }
+                    }
+                }
+            ]
+        },
+        "/wp/v2/pages/(?P\u003Cparent\u003E[\\d]+)/autosaves/(?P\u003Cid\u003E[\\d]+)": {
+            "namespace": "wp/v2",
+            "methods": ["GET"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "parent": {
+                            "required": false,
+                            "description": "ID cha của đối tượng.",
+                            "type": "integer"
+                        },
+                        "id": {
+                            "required": false,
+                            "description": "ID cho đối tượng.",
+                            "type": "integer"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["view", "embed", "edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        }
+                    }
+                }
+            ]
+        },
+        "/wp/v2/media": {
+            "namespace": "wp/v2",
+            "methods": ["GET", "POST"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["view", "embed", "edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        },
+                        "page": {
+                            "required": false,
+                            "default": 1,
+                            "description": "Trang hiện tại của bộ sưu tập.",
+                            "type": "integer"
+                        },
+                        "per_page": {
+                            "required": false,
+                            "default": 10,
+                            "description": "Số lượng kết quả được trả về một lần.",
+                            "type": "integer"
+                        },
+                        "search": {
+                            "required": false,
+                            "description": "Giới hạn kết quả phù hợp trong một chuỗi.",
+                            "type": "string"
+                        },
+                        "after": {
+                            "required": false,
+                            "description": "Giới hạn response trả về chỉ gồm bài viết xuất bản sau một ngày (định dạng ISO8601) cụ thể.",
+                            "type": "string"
+                        },
+                        "author": {
+                            "required": false,
+                            "default": [],
+                            "description": "Giới hạn kết quả là các bài viết của các tác giả cụ thể.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "author_exclude": {
+                            "required": false,
+                            "default": [],
+                            "description": "Đảm bảo rằng kết quả đã loại bỏ những bài viết của các tác giả cụ thể.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "before": {
+                            "required": false,
+                            "description": "Giới hạn response chỉ bao gồm những bài viết được xuất bản trước một ngày tháng (định dạng ISO8601) cụ thể.",
+                            "type": "string"
+                        },
+                        "exclude": {
+                            "required": false,
+                            "default": [],
+                            "description": "Chắc chắn kết quả loại trừ những ID cố định.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "include": {
+                            "required": false,
+                            "default": [],
+                            "description": "Giới hạn kết quả chỉ những ID cố định.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "offset": {
+                            "required": false,
+                            "description": "Offset kết quả được thiết lập bởi một số lượng cụ thể.",
+                            "type": "integer"
+                        },
+                        "order": {
+                            "required": false,
+                            "default": "desc",
+                            "enum": ["asc", "desc"],
+                            "description": "Sắp xếp thuộc tính tăng dần hoặc giảm dần.",
+                            "type": "string"
+                        },
+                        "orderby": {
+                            "required": false,
+                            "default": "date",
+                            "enum": ["author", "date", "id", "include", "modified", "parent", "relevance", "slug", "include_slugs", "title"],
+                            "description": "Sắp xếp danh sách bằng thuộc tính của đối tượng.",
+                            "type": "string"
+                        },
+                        "parent": {
+                            "required": false,
+                            "default": [],
+                            "description": "Giới hạn kết quả cho những bài viết thuộc về những ID cha cụ thể.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "parent_exclude": {
+                            "required": false,
+                            "default": [],
+                            "description": "Giới hạn kết quả trừ những bài viết không thuộc về một ID cha cụ thể.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "slug": {
+                            "required": false,
+                            "description": "Giới hạn kết quả thiết lập cho bài viết với một hoặc nhiều đường dẫn cụ thể.",
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "status": {
+                            "required": false,
+                            "default": "inherit",
+                            "description": "Giới hạn kết quả cho các bài viết được gán một hoặc nhiều trạng thái.",
+                            "type": "array",
+                            "items": {
+                                "enum": ["inherit", "private", "trash"],
+                                "type": "string"
+                            }
+                        },
+                        "media_type": {
+                            "required": false,
+                            "enum": ["image", "video", "text", "application", "audio"],
+                            "description": "Giới hạn kết quả chỉ gồm attachments có kiểu MIME cụ thể.",
+                            "type": "string"
+                        },
+                        "mime_type": {
+                            "required": false,
+                            "description": "Giới hạn kết quả chỉ gồm attachments có kiểu MIME cụ thể.",
+                            "type": "string"
+                        }
+                    }
+                },
+                {
+                    "methods": ["POST"],
+                    "args": {
+                        "date": {
+                            "required": false,
+                            "description": "Ngày đối tượng được xuất bản, theo múi giờ của trang web.",
+                            "type": ["string", "null"]
+                        },
+                        "date_gmt": {
+                            "required": false,
+                            "description": "Ngày đối tượng được xuất bản, theo giờ GMT.",
+                            "type": ["string", "null"]
+                        },
+                        "slug": {
+                            "required": false,
+                            "description": "Một ID bằng chữ và số cho đối tượng.",
+                            "type": "string"
+                        },
+                        "status": {
+                            "required": false,
+                            "enum": ["publish", "future", "draft", "pending", "private"],
+                            "description": "Một trạng thái định danh cho đối tượng.",
+                            "type": "string"
+                        },
+                        "title": {
+                            "required": false,
+                            "description": "Tiêu đề cho đối tượng.",
+                            "type": "object"
+                        },
+                        "author": {
+                            "required": false,
+                            "description": "ID cho tác giả của đối tượng.",
+                            "type": "integer"
+                        },
+                        "comment_status": {
+                            "required": false,
+                            "enum": ["open", "closed"],
+                            "description": "Bình luận được mở cho đối tượng hay không.",
+                            "type": "string"
+                        },
+                        "ping_status": {
+                            "required": false,
+                            "enum": ["open", "closed"],
+                            "description": "Liệu đối tượng có thể được ping hay không.",
+                            "type": "string"
+                        },
+                        "meta": {
+                            "required": false,
+                            "description": "Các trường meta.",
+                            "type": "object"
+                        },
+                        "template": {
+                            "required": false,
+                            "description": "Các tập tin của giao diện sử dụng để hiển thị các đối tượng.",
+                            "type": "string"
+                        },
+                        "alt_text": {
+                            "required": false,
+                            "description": "Chữ hiện thị thay thế khi tập tin đính kèm không thể hiển thị.",
+                            "type": "string"
+                        },
+                        "caption": {
+                            "required": false,
+                            "description": "Chú thích của tập tin đính kèm.",
+                            "type": "object"
+                        },
+                        "description": {
+                            "required": false,
+                            "description": "Miêu tả của tập tin đính kèm.",
+                            "type": "object"
+                        },
+                        "post": {
+                            "required": false,
+                            "description": "ID của bài viết được được đính với tập tin đính kèm.",
+                            "type": "integer"
+                        }
+                    }
+                }
+            ],
+            "_links": {
+                "self": [
+                    {
+                        "href": "https://builder.simplepage.vn/wp-json/wp/v2/media"
+                    }
+                ]
+            }
+        },
+        "/wp/v2/media/(?P\u003Cid\u003E[\\d]+)": {
+            "namespace": "wp/v2",
+            "methods": ["GET", "POST", "PUT", "PATCH", "DELETE"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "id": {
+                            "required": false,
+                            "description": "ID cho đối tượng.",
+                            "type": "integer"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["view", "embed", "edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        }
+                    }
+                },
+                {
+                    "methods": ["POST", "PUT", "PATCH"],
+                    "args": {
+                        "id": {
+                            "required": false,
+                            "description": "ID cho đối tượng.",
+                            "type": "integer"
+                        },
+                        "date": {
+                            "required": false,
+                            "description": "Ngày đối tượng được xuất bản, theo múi giờ của trang web.",
+                            "type": ["string", "null"]
+                        },
+                        "date_gmt": {
+                            "required": false,
+                            "description": "Ngày đối tượng được xuất bản, theo giờ GMT.",
+                            "type": ["string", "null"]
+                        },
+                        "slug": {
+                            "required": false,
+                            "description": "Một ID bằng chữ và số cho đối tượng.",
+                            "type": "string"
+                        },
+                        "status": {
+                            "required": false,
+                            "enum": ["publish", "future", "draft", "pending", "private"],
+                            "description": "Một trạng thái định danh cho đối tượng.",
+                            "type": "string"
+                        },
+                        "title": {
+                            "required": false,
+                            "description": "Tiêu đề cho đối tượng.",
+                            "type": "object"
+                        },
+                        "author": {
+                            "required": false,
+                            "description": "ID cho tác giả của đối tượng.",
+                            "type": "integer"
+                        },
+                        "comment_status": {
+                            "required": false,
+                            "enum": ["open", "closed"],
+                            "description": "Bình luận được mở cho đối tượng hay không.",
+                            "type": "string"
+                        },
+                        "ping_status": {
+                            "required": false,
+                            "enum": ["open", "closed"],
+                            "description": "Liệu đối tượng có thể được ping hay không.",
+                            "type": "string"
+                        },
+                        "meta": {
+                            "required": false,
+                            "description": "Các trường meta.",
+                            "type": "object"
+                        },
+                        "template": {
+                            "required": false,
+                            "description": "Các tập tin của giao diện sử dụng để hiển thị các đối tượng.",
+                            "type": "string"
+                        },
+                        "alt_text": {
+                            "required": false,
+                            "description": "Chữ hiện thị thay thế khi tập tin đính kèm không thể hiển thị.",
+                            "type": "string"
+                        },
+                        "caption": {
+                            "required": false,
+                            "description": "Chú thích của tập tin đính kèm.",
+                            "type": "object"
+                        },
+                        "description": {
+                            "required": false,
+                            "description": "Miêu tả của tập tin đính kèm.",
+                            "type": "object"
+                        },
+                        "post": {
+                            "required": false,
+                            "description": "ID của bài viết được được đính với tập tin đính kèm.",
+                            "type": "integer"
+                        }
+                    }
+                },
+                {
+                    "methods": ["DELETE"],
+                    "args": {
+                        "id": {
+                            "required": false,
+                            "description": "ID cho đối tượng.",
+                            "type": "integer"
+                        },
+                        "force": {
+                            "required": false,
+                            "default": false,
+                            "description": "Whether to bypass Trash and force deletion.",
+                            "type": "boolean"
+                        }
+                    }
+                }
+            ]
+        },
+        "/wp/v2/media/(?P\u003Cid\u003E[\\d]+)/post-process": {
+            "namespace": "wp/v2",
+            "methods": ["POST"],
+            "endpoints": [
+                {
+                    "methods": ["POST"],
+                    "args": {
+                        "id": {
+                            "required": false,
+                            "description": "ID cho đối tượng.",
+                            "type": "integer"
+                        },
+                        "action": {
+                            "required": true,
+                            "enum": ["create-image-subsizes"],
+                            "type": "string"
+                        }
+                    }
+                }
+            ]
+        },
+        "/wp/v2/blocks": {
+            "namespace": "wp/v2",
+            "methods": ["GET", "POST"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["view", "embed", "edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        },
+                        "page": {
+                            "required": false,
+                            "default": 1,
+                            "description": "Trang hiện tại của bộ sưu tập.",
+                            "type": "integer"
+                        },
+                        "per_page": {
+                            "required": false,
+                            "default": 10,
+                            "description": "Số lượng kết quả được trả về một lần.",
+                            "type": "integer"
+                        },
+                        "search": {
+                            "required": false,
+                            "description": "Giới hạn kết quả phù hợp trong một chuỗi.",
+                            "type": "string"
+                        },
+                        "after": {
+                            "required": false,
+                            "description": "Giới hạn response trả về chỉ gồm bài viết xuất bản sau một ngày (định dạng ISO8601) cụ thể.",
+                            "type": "string"
+                        },
+                        "before": {
+                            "required": false,
+                            "description": "Giới hạn response chỉ bao gồm những bài viết được xuất bản trước một ngày tháng (định dạng ISO8601) cụ thể.",
+                            "type": "string"
+                        },
+                        "exclude": {
+                            "required": false,
+                            "default": [],
+                            "description": "Chắc chắn kết quả loại trừ những ID cố định.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "include": {
+                            "required": false,
+                            "default": [],
+                            "description": "Giới hạn kết quả chỉ những ID cố định.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "offset": {
+                            "required": false,
+                            "description": "Offset kết quả được thiết lập bởi một số lượng cụ thể.",
+                            "type": "integer"
+                        },
+                        "order": {
+                            "required": false,
+                            "default": "desc",
+                            "enum": ["asc", "desc"],
+                            "description": "Sắp xếp thuộc tính tăng dần hoặc giảm dần.",
+                            "type": "string"
+                        },
+                        "orderby": {
+                            "required": false,
+                            "default": "date",
+                            "enum": ["author", "date", "id", "include", "modified", "parent", "relevance", "slug", "include_slugs", "title"],
+                            "description": "Sắp xếp danh sách bằng thuộc tính của đối tượng.",
+                            "type": "string"
+                        },
+                        "slug": {
+                            "required": false,
+                            "description": "Giới hạn kết quả thiết lập cho bài viết với một hoặc nhiều đường dẫn cụ thể.",
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "status": {
+                            "required": false,
+                            "default": "publish",
+                            "description": "Giới hạn kết quả cho các bài viết được gán một hoặc nhiều trạng thái.",
+                            "type": "array",
+                            "items": {
+                                "enum": [
+                                    "publish",
+                                    "future",
+                                    "draft",
+                                    "pending",
+                                    "private",
+                                    "trash",
+                                    "auto-draft",
+                                    "inherit",
+                                    "request-pending",
+                                    "request-confirmed",
+                                    "request-failed",
+                                    "request-completed",
+                                    "any"
+                                ],
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                {
+                    "methods": ["POST"],
+                    "args": {
+                        "date": {
+                            "required": false,
+                            "description": "Ngày đối tượng được xuất bản, theo múi giờ của trang web.",
+                            "type": ["string", "null"]
+                        },
+                        "date_gmt": {
+                            "required": false,
+                            "description": "Ngày đối tượng được xuất bản, theo giờ GMT.",
+                            "type": ["string", "null"]
+                        },
+                        "slug": {
+                            "required": false,
+                            "description": "Một ID bằng chữ và số cho đối tượng.",
+                            "type": "string"
+                        },
+                        "status": {
+                            "required": false,
+                            "enum": ["publish", "future", "draft", "pending", "private"],
+                            "description": "Một trạng thái định danh cho đối tượng.",
+                            "type": "string"
+                        },
+                        "password": {
+                            "required": false,
+                            "description": "Mật khẩu để bảo mật truy cập đến nội dung và tóm tắt.",
+                            "type": "string"
+                        },
+                        "title": {
+                            "required": false,
+                            "description": "Tiêu đề cho đối tượng.",
+                            "type": "object"
+                        },
+                        "content": {
+                            "required": false,
+                            "description": "Nội dung cho đối tượng.",
+                            "type": "object"
+                        },
+                        "template": {
+                            "required": false,
+                            "description": "Các tập tin của giao diện sử dụng để hiển thị các đối tượng.",
+                            "type": "string"
+                        }
+                    }
+                }
+            ],
+            "_links": {
+                "self": [
+                    {
+                        "href": "https://builder.simplepage.vn/wp-json/wp/v2/blocks"
+                    }
+                ]
+            }
+        },
+        "/wp/v2/blocks/(?P\u003Cid\u003E[\\d]+)": {
+            "namespace": "wp/v2",
+            "methods": ["GET", "POST", "PUT", "PATCH", "DELETE"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "id": {
+                            "required": false,
+                            "description": "ID cho đối tượng.",
+                            "type": "integer"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["view", "embed", "edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        },
+                        "password": {
+                            "required": false,
+                            "description": "Mật khẩu của bài viết đó nếu nó được bảo vệ.",
+                            "type": "string"
+                        }
+                    }
+                },
+                {
+                    "methods": ["POST", "PUT", "PATCH"],
+                    "args": {
+                        "id": {
+                            "required": false,
+                            "description": "ID cho đối tượng.",
+                            "type": "integer"
+                        },
+                        "date": {
+                            "required": false,
+                            "description": "Ngày đối tượng được xuất bản, theo múi giờ của trang web.",
+                            "type": ["string", "null"]
+                        },
+                        "date_gmt": {
+                            "required": false,
+                            "description": "Ngày đối tượng được xuất bản, theo giờ GMT.",
+                            "type": ["string", "null"]
+                        },
+                        "slug": {
+                            "required": false,
+                            "description": "Một ID bằng chữ và số cho đối tượng.",
+                            "type": "string"
+                        },
+                        "status": {
+                            "required": false,
+                            "enum": ["publish", "future", "draft", "pending", "private"],
+                            "description": "Một trạng thái định danh cho đối tượng.",
+                            "type": "string"
+                        },
+                        "password": {
+                            "required": false,
+                            "description": "Mật khẩu để bảo mật truy cập đến nội dung và tóm tắt.",
+                            "type": "string"
+                        },
+                        "title": {
+                            "required": false,
+                            "description": "Tiêu đề cho đối tượng.",
+                            "type": "object"
+                        },
+                        "content": {
+                            "required": false,
+                            "description": "Nội dung cho đối tượng.",
+                            "type": "object"
+                        },
+                        "template": {
+                            "required": false,
+                            "description": "Các tập tin của giao diện sử dụng để hiển thị các đối tượng.",
+                            "type": "string"
+                        }
+                    }
+                },
+                {
+                    "methods": ["DELETE"],
+                    "args": {
+                        "id": {
+                            "required": false,
+                            "description": "ID cho đối tượng.",
+                            "type": "integer"
+                        },
+                        "force": {
+                            "required": false,
+                            "default": false,
+                            "description": "Whether to bypass Trash and force deletion.",
+                            "type": "boolean"
+                        }
+                    }
+                }
+            ]
+        },
+        "/wp/v2/blocks/(?P\u003Cid\u003E[\\d]+)/autosaves": {
+            "namespace": "wp/v2",
+            "methods": ["GET", "POST"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "parent": {
+                            "required": false,
+                            "description": "ID cha của đối tượng.",
+                            "type": "integer"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["view", "embed", "edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        }
+                    }
+                },
+                {
+                    "methods": ["POST"],
+                    "args": {
+                        "parent": {
+                            "required": false,
+                            "description": "ID cha của đối tượng.",
+                            "type": "integer"
+                        },
+                        "date": {
+                            "required": false,
+                            "description": "Ngày đối tượng được xuất bản, theo múi giờ của trang web.",
+                            "type": ["string", "null"]
+                        },
+                        "date_gmt": {
+                            "required": false,
+                            "description": "Ngày đối tượng được xuất bản, theo giờ GMT.",
+                            "type": ["string", "null"]
+                        },
+                        "slug": {
+                            "required": false,
+                            "description": "Một ID bằng chữ và số cho đối tượng.",
+                            "type": "string"
+                        },
+                        "status": {
+                            "required": false,
+                            "enum": ["publish", "future", "draft", "pending", "private"],
+                            "description": "Một trạng thái định danh cho đối tượng.",
+                            "type": "string"
+                        },
+                        "password": {
+                            "required": false,
+                            "description": "Mật khẩu để bảo mật truy cập đến nội dung và tóm tắt.",
+                            "type": "string"
+                        },
+                        "title": {
+                            "required": false,
+                            "description": "Tiêu đề cho đối tượng.",
+                            "type": "object"
+                        },
+                        "content": {
+                            "required": false,
+                            "description": "Nội dung cho đối tượng.",
+                            "type": "object"
+                        },
+                        "template": {
+                            "required": false,
+                            "description": "Các tập tin của giao diện sử dụng để hiển thị các đối tượng.",
+                            "type": "string"
+                        }
+                    }
+                }
+            ]
+        },
+        "/wp/v2/blocks/(?P\u003Cparent\u003E[\\d]+)/autosaves/(?P\u003Cid\u003E[\\d]+)": {
+            "namespace": "wp/v2",
+            "methods": ["GET"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "parent": {
+                            "required": false,
+                            "description": "ID cha của đối tượng.",
+                            "type": "integer"
+                        },
+                        "id": {
+                            "required": false,
+                            "description": "ID cho đối tượng.",
+                            "type": "integer"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["view", "embed", "edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        }
+                    }
+                }
+            ]
+        },
+        "/wp/v2/types": {
+            "namespace": "wp/v2",
+            "methods": ["GET"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["view", "embed", "edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        }
+                    }
+                }
+            ],
+            "_links": {
+                "self": [
+                    {
+                        "href": "https://builder.simplepage.vn/wp-json/wp/v2/types"
+                    }
+                ]
+            }
+        },
+        "/wp/v2/types/(?P\u003Ctype\u003E[\\w-]+)": {
+            "namespace": "wp/v2",
+            "methods": ["GET"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "type": {
+                            "required": false,
+                            "description": "Chữ và số xác nhận cho loại bài viết",
+                            "type": "string"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["view", "embed", "edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        }
+                    }
+                }
+            ]
+        },
+        "/wp/v2/statuses": {
+            "namespace": "wp/v2",
+            "methods": ["GET"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["view", "embed", "edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        }
+                    }
+                }
+            ],
+            "_links": {
+                "self": [
+                    {
+                        "href": "https://builder.simplepage.vn/wp-json/wp/v2/statuses"
+                    }
+                ]
+            }
+        },
+        "/wp/v2/statuses/(?P\u003Cstatus\u003E[\\w-]+)": {
+            "namespace": "wp/v2",
+            "methods": ["GET"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "status": {
+                            "required": false,
+                            "description": "Chữ và số xác nhận của trạng thái",
+                            "type": "string"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["view", "embed", "edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        }
+                    }
+                }
+            ]
+        },
+        "/wp/v2/taxonomies": {
+            "namespace": "wp/v2",
+            "methods": ["GET"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["view", "embed", "edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        },
+                        "type": {
+                            "required": false,
+                            "description": "Giới hạn kết quả cho các taxonomy được gán cho một loại bài viết cụ thể.",
+                            "type": "string"
+                        }
+                    }
+                }
+            ],
+            "_links": {
+                "self": [
+                    {
+                        "href": "https://builder.simplepage.vn/wp-json/wp/v2/taxonomies"
+                    }
+                ]
+            }
+        },
+        "/wp/v2/taxonomies/(?P\u003Ctaxonomy\u003E[\\w-]+)": {
+            "namespace": "wp/v2",
+            "methods": ["GET"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "taxonomy": {
+                            "required": false,
+                            "description": "Chữ và số xác nhận để phân loại",
+                            "type": "string"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["view", "embed", "edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        }
+                    }
+                }
+            ]
+        },
+        "/wp/v2/categories": {
+            "namespace": "wp/v2",
+            "methods": ["GET", "POST"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["view", "embed", "edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        },
+                        "page": {
+                            "required": false,
+                            "default": 1,
+                            "description": "Trang hiện tại của bộ sưu tập.",
+                            "type": "integer"
+                        },
+                        "per_page": {
+                            "required": false,
+                            "default": 10,
+                            "description": "Số lượng kết quả được trả về một lần.",
+                            "type": "integer"
+                        },
+                        "search": {
+                            "required": false,
+                            "description": "Giới hạn kết quả phù hợp trong một chuỗi.",
+                            "type": "string"
+                        },
+                        "exclude": {
+                            "required": false,
+                            "default": [],
+                            "description": "Chắc chắn kết quả loại trừ những ID cố định.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "include": {
+                            "required": false,
+                            "default": [],
+                            "description": "Giới hạn kết quả chỉ những ID cố định.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "order": {
+                            "required": false,
+                            "default": "asc",
+                            "enum": ["asc", "desc"],
+                            "description": "Sắp xếp thuộc tính tăng dần hoặc giảm dần.",
+                            "type": "string"
+                        },
+                        "orderby": {
+                            "required": false,
+                            "default": "name",
+                            "enum": ["id", "include", "name", "slug", "include_slugs", "term_group", "description", "count"],
+                            "description": "Sắp xếp bộ sưu tập theo thuộc tính của term.",
+                            "type": "string"
+                        },
+                        "hide_empty": {
+                            "required": false,
+                            "default": false,
+                            "description": "Ẩn hay không các term được không được gán cho bất kỳ bài viết nào.",
+                            "type": "boolean"
+                        },
+                        "parent": {
+                            "required": false,
+                            "description": "Giới hạn kết quả cho các term được gán cho term cha cụ thể.",
+                            "type": "integer"
+                        },
+                        "post": {
+                            "required": false,
+                            "description": "Giới hạn kết quả cho các term được gán cho một bài viết cụ thể.",
+                            "type": "integer"
+                        },
+                        "slug": {
+                            "required": false,
+                            "description": "Giới hạn kết quả cho những terms với một hoặc nhiều slugs cụ thể.",
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                {
+                    "methods": ["POST"],
+                    "args": {
+                        "description": {
+                            "required": false,
+                            "description": "Mô tả HTML cho tài nguyên.",
+                            "type": "string"
+                        },
+                        "name": {
+                            "required": true,
+                            "description": "Tiêu đề HTML cho term.",
+                            "type": "string"
+                        },
+                        "slug": {
+                            "required": false,
+                            "description": "Một alphanumeric identifier cho term duy nhất tới loại của nó.",
+                            "type": "string"
+                        },
+                        "parent": {
+                            "required": false,
+                            "description": "ID của term cha.",
+                            "type": "integer"
+                        },
+                        "meta": {
+                            "required": false,
+                            "description": "Các trường meta.",
+                            "type": "object"
+                        }
+                    }
+                }
+            ],
+            "_links": {
+                "self": [
+                    {
+                        "href": "https://builder.simplepage.vn/wp-json/wp/v2/categories"
+                    }
+                ]
+            }
+        },
+        "/wp/v2/categories/(?P\u003Cid\u003E[\\d]+)": {
+            "namespace": "wp/v2",
+            "methods": ["GET", "POST", "PUT", "PATCH", "DELETE"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "id": {
+                            "required": false,
+                            "description": "Mã xác nhận cho thuật ngữ",
+                            "type": "integer"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["view", "embed", "edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        }
+                    }
+                },
+                {
+                    "methods": ["POST", "PUT", "PATCH"],
+                    "args": {
+                        "id": {
+                            "required": false,
+                            "description": "Mã xác nhận cho thuật ngữ",
+                            "type": "integer"
+                        },
+                        "description": {
+                            "required": false,
+                            "description": "Mô tả HTML cho tài nguyên.",
+                            "type": "string"
+                        },
+                        "name": {
+                            "required": false,
+                            "description": "Tiêu đề HTML cho term.",
+                            "type": "string"
+                        },
+                        "slug": {
+                            "required": false,
+                            "description": "Một alphanumeric identifier cho term duy nhất tới loại của nó.",
+                            "type": "string"
+                        },
+                        "parent": {
+                            "required": false,
+                            "description": "ID của term cha.",
+                            "type": "integer"
+                        },
+                        "meta": {
+                            "required": false,
+                            "description": "Các trường meta.",
+                            "type": "object"
+                        }
+                    }
+                },
+                {
+                    "methods": ["DELETE"],
+                    "args": {
+                        "id": {
+                            "required": false,
+                            "description": "Mã xác nhận cho thuật ngữ",
+                            "type": "integer"
+                        },
+                        "force": {
+                            "required": false,
+                            "default": false,
+                            "description": "Yêu cầu phải đúng, các thuật ngữ không thể bị xóa",
+                            "type": "boolean"
+                        }
+                    }
+                }
+            ]
+        },
+        "/wp/v2/tags": {
+            "namespace": "wp/v2",
+            "methods": ["GET", "POST"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["view", "embed", "edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        },
+                        "page": {
+                            "required": false,
+                            "default": 1,
+                            "description": "Trang hiện tại của bộ sưu tập.",
+                            "type": "integer"
+                        },
+                        "per_page": {
+                            "required": false,
+                            "default": 10,
+                            "description": "Số lượng kết quả được trả về một lần.",
+                            "type": "integer"
+                        },
+                        "search": {
+                            "required": false,
+                            "description": "Giới hạn kết quả phù hợp trong một chuỗi.",
+                            "type": "string"
+                        },
+                        "exclude": {
+                            "required": false,
+                            "default": [],
+                            "description": "Chắc chắn kết quả loại trừ những ID cố định.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "include": {
+                            "required": false,
+                            "default": [],
+                            "description": "Giới hạn kết quả chỉ những ID cố định.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "offset": {
+                            "required": false,
+                            "description": "Offset kết quả được thiết lập bởi một số lượng cụ thể.",
+                            "type": "integer"
+                        },
+                        "order": {
+                            "required": false,
+                            "default": "asc",
+                            "enum": ["asc", "desc"],
+                            "description": "Sắp xếp thuộc tính tăng dần hoặc giảm dần.",
+                            "type": "string"
+                        },
+                        "orderby": {
+                            "required": false,
+                            "default": "name",
+                            "enum": ["id", "include", "name", "slug", "include_slugs", "term_group", "description", "count"],
+                            "description": "Sắp xếp bộ sưu tập theo thuộc tính của term.",
+                            "type": "string"
+                        },
+                        "hide_empty": {
+                            "required": false,
+                            "default": false,
+                            "description": "Ẩn hay không các term được không được gán cho bất kỳ bài viết nào.",
+                            "type": "boolean"
+                        },
+                        "post": {
+                            "required": false,
+                            "description": "Giới hạn kết quả cho các term được gán cho một bài viết cụ thể.",
+                            "type": "integer"
+                        },
+                        "slug": {
+                            "required": false,
+                            "description": "Giới hạn kết quả cho những terms với một hoặc nhiều slugs cụ thể.",
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                {
+                    "methods": ["POST"],
+                    "args": {
+                        "description": {
+                            "required": false,
+                            "description": "Mô tả HTML cho tài nguyên.",
+                            "type": "string"
+                        },
+                        "name": {
+                            "required": true,
+                            "description": "Tiêu đề HTML cho term.",
+                            "type": "string"
+                        },
+                        "slug": {
+                            "required": false,
+                            "description": "Một alphanumeric identifier cho term duy nhất tới loại của nó.",
+                            "type": "string"
+                        },
+                        "meta": {
+                            "required": false,
+                            "description": "Các trường meta.",
+                            "type": "object"
+                        }
+                    }
+                }
+            ],
+            "_links": {
+                "self": [
+                    {
+                        "href": "https://builder.simplepage.vn/wp-json/wp/v2/tags"
+                    }
+                ]
+            }
+        },
+        "/wp/v2/tags/(?P\u003Cid\u003E[\\d]+)": {
+            "namespace": "wp/v2",
+            "methods": ["GET", "POST", "PUT", "PATCH", "DELETE"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "id": {
+                            "required": false,
+                            "description": "Mã xác nhận cho thuật ngữ",
+                            "type": "integer"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["view", "embed", "edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        }
+                    }
+                },
+                {
+                    "methods": ["POST", "PUT", "PATCH"],
+                    "args": {
+                        "id": {
+                            "required": false,
+                            "description": "Mã xác nhận cho thuật ngữ",
+                            "type": "integer"
+                        },
+                        "description": {
+                            "required": false,
+                            "description": "Mô tả HTML cho tài nguyên.",
+                            "type": "string"
+                        },
+                        "name": {
+                            "required": false,
+                            "description": "Tiêu đề HTML cho term.",
+                            "type": "string"
+                        },
+                        "slug": {
+                            "required": false,
+                            "description": "Một alphanumeric identifier cho term duy nhất tới loại của nó.",
+                            "type": "string"
+                        },
+                        "meta": {
+                            "required": false,
+                            "description": "Các trường meta.",
+                            "type": "object"
+                        }
+                    }
+                },
+                {
+                    "methods": ["DELETE"],
+                    "args": {
+                        "id": {
+                            "required": false,
+                            "description": "Mã xác nhận cho thuật ngữ",
+                            "type": "integer"
+                        },
+                        "force": {
+                            "required": false,
+                            "default": false,
+                            "description": "Yêu cầu phải đúng, các thuật ngữ không thể bị xóa",
+                            "type": "boolean"
+                        }
+                    }
+                }
+            ]
+        },
+        "/wp/v2/users": {
+            "namespace": "wp/v2",
+            "methods": ["GET", "POST"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["view", "embed", "edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        },
+                        "page": {
+                            "required": false,
+                            "default": 1,
+                            "description": "Trang hiện tại của bộ sưu tập.",
+                            "type": "integer"
+                        },
+                        "per_page": {
+                            "required": false,
+                            "default": 10,
+                            "description": "Số lượng kết quả được trả về một lần.",
+                            "type": "integer"
+                        },
+                        "search": {
+                            "required": false,
+                            "description": "Giới hạn kết quả phù hợp trong một chuỗi.",
+                            "type": "string"
+                        },
+                        "exclude": {
+                            "required": false,
+                            "default": [],
+                            "description": "Chắc chắn kết quả loại trừ những ID cố định.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "include": {
+                            "required": false,
+                            "default": [],
+                            "description": "Giới hạn kết quả chỉ những ID cố định.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "offset": {
+                            "required": false,
+                            "description": "Offset kết quả được thiết lập bởi một số lượng cụ thể.",
+                            "type": "integer"
+                        },
+                        "order": {
+                            "required": false,
+                            "default": "asc",
+                            "enum": ["asc", "desc"],
+                            "description": "Sắp xếp thuộc tính tăng dần hoặc giảm dần.",
+                            "type": "string"
+                        },
+                        "orderby": {
+                            "required": false,
+                            "default": "name",
+                            "enum": ["id", "include", "name", "registered_date", "slug", "include_slugs", "email", "url"],
+                            "description": "Sắp xếp danh sách bằng thuộc tính của đối tượng.",
+                            "type": "string"
+                        },
+                        "slug": {
+                            "required": false,
+                            "description": "Giới hạn kết quả cho những người dùng có một hoặc nhiều slugs cụ thể.",
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "roles": {
+                            "required": false,
+                            "description": "Giới hạn kết quả cho những người dùng có ít nhất một vai trò cụ thể được cung cấp. Chấp nhận danh sách csv hoặc một vai trò đơn lẻ.",
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "who": {
+                            "required": false,
+                            "enum": ["authors"],
+                            "description": "Giới hạn kết quả cho những người dùng được xem là tác giả.",
+                            "type": "string"
+                        }
+                    }
+                },
+                {
+                    "methods": ["POST"],
+                    "args": {
+                        "username": {
+                            "required": true,
+                            "description": "Tên đăng nhập",
+                            "type": "string"
+                        },
+                        "name": {
+                            "required": false,
+                            "description": "Tên hiển thị.",
+                            "type": "string"
+                        },
+                        "first_name": {
+                            "required": false,
+                            "description": "Tên người sử dụng.",
+                            "type": "string"
+                        },
+                        "last_name": {
+                            "required": false,
+                            "description": "Họ người sử dụng.",
+                            "type": "string"
+                        },
+                        "email": {
+                            "required": true,
+                            "description": "Địa chỉ email cho tài nguyên.",
+                            "type": "string"
+                        },
+                        "url": {
+                            "required": false,
+                            "description": "Đường dẫn của người sử dụng",
+                            "type": "string"
+                        },
+                        "description": {
+                            "required": false,
+                            "description": "Giới thiệu về người sử dụng",
+                            "type": "string"
+                        },
+                        "locale": {
+                            "required": false,
+                            "enum": ["", "en_US", "vi"],
+                            "description": "Ngôn ngữ cho người sử dụng",
+                            "type": "string"
+                        },
+                        "nickname": {
+                            "required": false,
+                            "description": "Nickname của người dùng",
+                            "type": "string"
+                        },
+                        "slug": {
+                            "required": false,
+                            "description": "Một ID bằng chữ và số cho thành viên.",
+                            "type": "string"
+                        },
+                        "roles": {
+                            "required": false,
+                            "description": "Vai trò (roles) của người dùng",
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "password": {
+                            "required": true,
+                            "description": "Mật khẩu cho người sử dụng (không bao giờ bao gồm).",
+                            "type": "string"
+                        },
+                        "meta": {
+                            "required": false,
+                            "description": "Các trường meta.",
+                            "type": "object"
+                        }
+                    }
+                }
+            ],
+            "_links": {
+                "self": [
+                    {
+                        "href": "https://builder.simplepage.vn/wp-json/wp/v2/users"
+                    }
+                ]
+            }
+        },
+        "/wp/v2/users/(?P\u003Cid\u003E[\\d]+)": {
+            "namespace": "wp/v2",
+            "methods": ["GET", "POST", "PUT", "PATCH", "DELETE"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "id": {
+                            "required": false,
+                            "description": "Định danh duy nhất cho các tài nguyên.",
+                            "type": "integer"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["view", "embed", "edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        }
+                    }
+                },
+                {
+                    "methods": ["POST", "PUT", "PATCH"],
+                    "args": {
+                        "id": {
+                            "required": false,
+                            "description": "Định danh duy nhất cho các tài nguyên.",
+                            "type": "integer"
+                        },
+                        "username": {
+                            "required": false,
+                            "description": "Tên đăng nhập",
+                            "type": "string"
+                        },
+                        "name": {
+                            "required": false,
+                            "description": "Tên hiển thị.",
+                            "type": "string"
+                        },
+                        "first_name": {
+                            "required": false,
+                            "description": "Tên người sử dụng.",
+                            "type": "string"
+                        },
+                        "last_name": {
+                            "required": false,
+                            "description": "Họ người sử dụng.",
+                            "type": "string"
+                        },
+                        "email": {
+                            "required": false,
+                            "description": "Địa chỉ email cho tài nguyên.",
+                            "type": "string"
+                        },
+                        "url": {
+                            "required": false,
+                            "description": "Đường dẫn của người sử dụng",
+                            "type": "string"
+                        },
+                        "description": {
+                            "required": false,
+                            "description": "Giới thiệu về người sử dụng",
+                            "type": "string"
+                        },
+                        "locale": {
+                            "required": false,
+                            "enum": ["", "en_US", "vi"],
+                            "description": "Ngôn ngữ cho người sử dụng",
+                            "type": "string"
+                        },
+                        "nickname": {
+                            "required": false,
+                            "description": "Nickname của người dùng",
+                            "type": "string"
+                        },
+                        "slug": {
+                            "required": false,
+                            "description": "Một ID bằng chữ và số cho thành viên.",
+                            "type": "string"
+                        },
+                        "roles": {
+                            "required": false,
+                            "description": "Vai trò (roles) của người dùng",
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "password": {
+                            "required": false,
+                            "description": "Mật khẩu cho người sử dụng (không bao giờ bao gồm).",
+                            "type": "string"
+                        },
+                        "meta": {
+                            "required": false,
+                            "description": "Các trường meta.",
+                            "type": "object"
+                        }
+                    }
+                },
+                {
+                    "methods": ["DELETE"],
+                    "args": {
+                        "id": {
+                            "required": false,
+                            "description": "Định danh duy nhất cho các tài nguyên.",
+                            "type": "integer"
+                        },
+                        "force": {
+                            "required": false,
+                            "default": false,
+                            "description": "Bắt buộc là true, vì người sử dụng không hỗ trợ đưa vào thùng rác.",
+                            "type": "boolean"
+                        },
+                        "reassign": {
+                            "required": true,
+                            "description": "Gán lại bài viết và các liên kết của người dùng bị xóa cho người dùng với ID này.",
+                            "type": "integer"
+                        }
+                    }
+                }
+            ]
+        },
+        "/wp/v2/users/me": {
+            "namespace": "wp/v2",
+            "methods": ["GET", "POST", "PUT", "PATCH", "DELETE"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["view", "embed", "edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        }
+                    }
+                },
+                {
+                    "methods": ["POST", "PUT", "PATCH"],
+                    "args": {
+                        "username": {
+                            "required": false,
+                            "description": "Tên đăng nhập",
+                            "type": "string"
+                        },
+                        "name": {
+                            "required": false,
+                            "description": "Tên hiển thị.",
+                            "type": "string"
+                        },
+                        "first_name": {
+                            "required": false,
+                            "description": "Tên người sử dụng.",
+                            "type": "string"
+                        },
+                        "last_name": {
+                            "required": false,
+                            "description": "Họ người sử dụng.",
+                            "type": "string"
+                        },
+                        "email": {
+                            "required": false,
+                            "description": "Địa chỉ email cho tài nguyên.",
+                            "type": "string"
+                        },
+                        "url": {
+                            "required": false,
+                            "description": "Đường dẫn của người sử dụng",
+                            "type": "string"
+                        },
+                        "description": {
+                            "required": false,
+                            "description": "Giới thiệu về người sử dụng",
+                            "type": "string"
+                        },
+                        "locale": {
+                            "required": false,
+                            "enum": ["", "en_US", "vi"],
+                            "description": "Ngôn ngữ cho người sử dụng",
+                            "type": "string"
+                        },
+                        "nickname": {
+                            "required": false,
+                            "description": "Nickname của người dùng",
+                            "type": "string"
+                        },
+                        "slug": {
+                            "required": false,
+                            "description": "Một ID bằng chữ và số cho thành viên.",
+                            "type": "string"
+                        },
+                        "roles": {
+                            "required": false,
+                            "description": "Vai trò (roles) của người dùng",
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "password": {
+                            "required": false,
+                            "description": "Mật khẩu cho người sử dụng (không bao giờ bao gồm).",
+                            "type": "string"
+                        },
+                        "meta": {
+                            "required": false,
+                            "description": "Các trường meta.",
+                            "type": "object"
+                        }
+                    }
+                },
+                {
+                    "methods": ["DELETE"],
+                    "args": {
+                        "force": {
+                            "required": false,
+                            "default": false,
+                            "description": "Bắt buộc là true, vì người sử dụng không hỗ trợ đưa vào thùng rác.",
+                            "type": "boolean"
+                        },
+                        "reassign": {
+                            "required": true,
+                            "description": "Gán lại bài viết và các liên kết của người dùng bị xóa cho người dùng với ID này.",
+                            "type": "integer"
+                        }
+                    }
+                }
+            ],
+            "_links": {
+                "self": [
+                    {
+                        "href": "https://builder.simplepage.vn/wp-json/wp/v2/users/me"
+                    }
+                ]
+            }
+        },
+        "/wp/v2/comments": {
+            "namespace": "wp/v2",
+            "methods": ["GET", "POST"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["view", "embed", "edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        },
+                        "page": {
+                            "required": false,
+                            "default": 1,
+                            "description": "Trang hiện tại của bộ sưu tập.",
+                            "type": "integer"
+                        },
+                        "per_page": {
+                            "required": false,
+                            "default": 10,
+                            "description": "Số lượng kết quả được trả về một lần.",
+                            "type": "integer"
+                        },
+                        "search": {
+                            "required": false,
+                            "description": "Giới hạn kết quả phù hợp trong một chuỗi.",
+                            "type": "string"
+                        },
+                        "after": {
+                            "required": false,
+                            "description": "Giới hạn những bình luận đăng sau ngày tiêu chuẩn ISO8601",
+                            "type": "string"
+                        },
+                        "author": {
+                            "required": false,
+                            "description": "Giới hạn kết quả chỉ gồm những bình luận của một số người dùng cụ thể. Yêu cầu xác thực tài khoản.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "author_exclude": {
+                            "required": false,
+                            "description": "Đảm bảo rằng kết quả đã loại bỏ những bình luận của một số người dùng nhất định. Yêu cầu xác thực tài khoản.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "author_email": {
+                            "required": false,
+                            "description": "Giới hạn kết quả từ một tác giả có email cụ thể. Yêu cầu xác thực tài khoản.",
+                            "type": "string"
+                        },
+                        "before": {
+                            "required": false,
+                            "description": "Giới hạn những bình luận đăng trước ngày tiêu chuẩn ISO8601",
+                            "type": "string"
+                        },
+                        "exclude": {
+                            "required": false,
+                            "default": [],
+                            "description": "Chắc chắn kết quả loại trừ những ID cố định.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "include": {
+                            "required": false,
+                            "default": [],
+                            "description": "Giới hạn kết quả chỉ những ID cố định.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "offset": {
+                            "required": false,
+                            "description": "Offset kết quả được thiết lập bởi một số lượng cụ thể.",
+                            "type": "integer"
+                        },
+                        "order": {
+                            "required": false,
+                            "default": "desc",
+                            "enum": ["asc", "desc"],
+                            "description": "Sắp xếp thuộc tính tăng dần hoặc giảm dần.",
+                            "type": "string"
+                        },
+                        "orderby": {
+                            "required": false,
+                            "default": "date_gmt",
+                            "enum": ["date", "date_gmt", "id", "include", "post", "parent", "type"],
+                            "description": "Sắp xếp danh sách bằng thuộc tính của đối tượng.",
+                            "type": "string"
+                        },
+                        "parent": {
+                            "required": false,
+                            "default": [],
+                            "description": "Đảm bảo rằng kết quả đã loại bỏ những bình luận có IDs cha cụ thể.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "parent_exclude": {
+                            "required": false,
+                            "default": [],
+                            "description": "Đảm bảo rằng kết quả đã loại bỏ những IDs cha được chọn.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "post": {
+                            "required": false,
+                            "default": [],
+                            "description": "Giới hạn kết quả chỉ gồm những bình luận của một số bài viết nhất định.",
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        },
+                        "status": {
+                            "required": false,
+                            "default": "approve",
+                            "description": "Giới hạn kết quả là các bình luận có một trạng thái cụ thể. Yêu cầu xác thực tài khoản.",
+                            "type": "string"
+                        },
+                        "type": {
+                            "required": false,
+                            "default": "comment",
+                            "description": "Giới hạn kết quả là các bình luận theo một loại cụ thể. Yêu cầu xác thực tài khoản.",
+                            "type": "string"
+                        },
+                        "password": {
+                            "required": false,
+                            "description": "Mật khẩu của bài viết đó nếu nó được bảo vệ.",
+                            "type": "string"
+                        }
+                    }
+                },
+                {
+                    "methods": ["POST"],
+                    "args": {
+                        "author": {
+                            "required": false,
+                            "description": "ID của đối tượng người dùng, nếu tác giả là một người dùng.",
+                            "type": "integer"
+                        },
+                        "author_email": {
+                            "required": false,
+                            "description": "Địa chỉ email cho đối tượng tác giả.",
+                            "type": "string"
+                        },
+                        "author_ip": {
+                            "required": false,
+                            "description": "Địa chỉ IP cho đối tượng tác giả.",
+                            "type": "string"
+                        },
+                        "author_name": {
+                            "required": false,
+                            "description": "Hiển thị tên cho đối tượng tác giả.",
+                            "type": "string"
+                        },
+                        "author_url": {
+                            "required": false,
+                            "description": "URL cho đối tượng tác giả.",
+                            "type": "string"
+                        },
+                        "author_user_agent": {
+                            "required": false,
+                            "description": "User agent cho đối tượng tác giả.",
+                            "type": "string"
+                        },
+                        "content": {
+                            "required": false,
+                            "description": "Nội dung cho đối tượng.",
+                            "type": "object"
+                        },
+                        "date": {
+                            "required": false,
+                            "description": "Ngày đối tượng được xuất bản, theo múi giờ của trang web.",
+                            "type": "string"
+                        },
+                        "date_gmt": {
+                            "required": false,
+                            "description": "Ngày đối tượng được xuất bản, theo giờ GMT.",
+                            "type": "string"
+                        },
+                        "parent": {
+                            "required": false,
+                            "default": 0,
+                            "description": "ID cha của đối tượng.",
+                            "type": "integer"
+                        },
+                        "post": {
+                            "required": false,
+                            "default": 0,
+                            "description": "ID của đối tượng bài viết liên quan.",
+                            "type": "integer"
+                        },
+                        "status": {
+                            "required": false,
+                            "description": "Trạng thái của đối tượng.",
+                            "type": "string"
+                        },
+                        "meta": {
+                            "required": false,
+                            "description": "Các trường meta.",
+                            "type": "object"
+                        }
+                    }
+                }
+            ],
+            "_links": {
+                "self": [
+                    {
+                        "href": "https://builder.simplepage.vn/wp-json/wp/v2/comments"
+                    }
+                ]
+            }
+        },
+        "/wp/v2/comments/(?P\u003Cid\u003E[\\d]+)": {
+            "namespace": "wp/v2",
+            "methods": ["GET", "POST", "PUT", "PATCH", "DELETE"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "id": {
+                            "required": false,
+                            "description": "ID cho đối tượng.",
+                            "type": "integer"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["view", "embed", "edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        },
+                        "password": {
+                            "required": false,
+                            "description": "Mật khẩu cho bài viết nơi comment này được đăng (nếu bài viết được bảo vệ bởi mật khẩu).",
+                            "type": "string"
+                        }
+                    }
+                },
+                {
+                    "methods": ["POST", "PUT", "PATCH"],
+                    "args": {
+                        "id": {
+                            "required": false,
+                            "description": "ID cho đối tượng.",
+                            "type": "integer"
+                        },
+                        "author": {
+                            "required": false,
+                            "description": "ID của đối tượng người dùng, nếu tác giả là một người dùng.",
+                            "type": "integer"
+                        },
+                        "author_email": {
+                            "required": false,
+                            "description": "Địa chỉ email cho đối tượng tác giả.",
+                            "type": "string"
+                        },
+                        "author_ip": {
+                            "required": false,
+                            "description": "Địa chỉ IP cho đối tượng tác giả.",
+                            "type": "string"
+                        },
+                        "author_name": {
+                            "required": false,
+                            "description": "Hiển thị tên cho đối tượng tác giả.",
+                            "type": "string"
+                        },
+                        "author_url": {
+                            "required": false,
+                            "description": "URL cho đối tượng tác giả.",
+                            "type": "string"
+                        },
+                        "author_user_agent": {
+                            "required": false,
+                            "description": "User agent cho đối tượng tác giả.",
+                            "type": "string"
+                        },
+                        "content": {
+                            "required": false,
+                            "description": "Nội dung cho đối tượng.",
+                            "type": "object"
+                        },
+                        "date": {
+                            "required": false,
+                            "description": "Ngày đối tượng được xuất bản, theo múi giờ của trang web.",
+                            "type": "string"
+                        },
+                        "date_gmt": {
+                            "required": false,
+                            "description": "Ngày đối tượng được xuất bản, theo giờ GMT.",
+                            "type": "string"
+                        },
+                        "parent": {
+                            "required": false,
+                            "description": "ID cha của đối tượng.",
+                            "type": "integer"
+                        },
+                        "post": {
+                            "required": false,
+                            "description": "ID của đối tượng bài viết liên quan.",
+                            "type": "integer"
+                        },
+                        "status": {
+                            "required": false,
+                            "description": "Trạng thái của đối tượng.",
+                            "type": "string"
+                        },
+                        "meta": {
+                            "required": false,
+                            "description": "Các trường meta.",
+                            "type": "object"
+                        }
+                    }
+                },
+                {
+                    "methods": ["DELETE"],
+                    "args": {
+                        "id": {
+                            "required": false,
+                            "description": "ID cho đối tượng.",
+                            "type": "integer"
+                        },
+                        "force": {
+                            "required": false,
+                            "default": false,
+                            "description": "Whether to bypass Trash and force deletion.",
+                            "type": "boolean"
+                        },
+                        "password": {
+                            "required": false,
+                            "description": "Mật khẩu cho bài viết nơi comment này được đăng (nếu bài viết được bảo vệ bởi mật khẩu).",
+                            "type": "string"
+                        }
+                    }
+                }
+            ]
+        },
+        "/wp/v2/search": {
+            "namespace": "wp/v2",
+            "methods": ["GET"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["view", "embed"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        },
+                        "page": {
+                            "required": false,
+                            "default": 1,
+                            "description": "Trang hiện tại của bộ sưu tập.",
+                            "type": "integer"
+                        },
+                        "per_page": {
+                            "required": false,
+                            "default": 10,
+                            "description": "Số lượng kết quả được trả về một lần.",
+                            "type": "integer"
+                        },
+                        "search": {
+                            "required": false,
+                            "description": "Giới hạn kết quả phù hợp trong một chuỗi.",
+                            "type": "string"
+                        },
+                        "type": {
+                            "required": false,
+                            "default": "post",
+                            "enum": ["post"],
+                            "description": "Giới hạn kết quả theo các item của một kiểu đối tượng.",
+                            "type": "string"
+                        },
+                        "subtype": {
+                            "required": false,
+                            "default": "any",
+                            "description": "Giới hạn kết quả theo các item của một hoặc nhiều kiểu phụ của đối tượng.",
+                            "type": "array",
+                            "items": {
+                                "enum": ["post", "page", "any"],
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            ],
+            "_links": {
+                "self": [
+                    {
+                        "href": "https://builder.simplepage.vn/wp-json/wp/v2/search"
+                    }
+                ]
+            }
+        },
+        "/wp/v2/block-renderer/(?P\u003Cname\u003Ecore/archives)": {
+            "namespace": "wp/v2",
+            "methods": ["GET"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "name": {
+                            "required": false,
+                            "description": "Tên đăng kí duy nhất cho block.",
+                            "type": "string"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        },
+                        "attributes": {
+                            "required": false,
+                            "default": [],
+                            "description": "Thuộc tính cho block core/archives",
+                            "type": "object"
+                        },
+                        "post_id": {
+                            "required": false,
+                            "description": "ID của post context.",
+                            "type": "integer"
+                        }
+                    }
+                }
+            ]
+        },
+        "/wp/v2/block-renderer/(?P\u003Cname\u003Ecore/block)": {
+            "namespace": "wp/v2",
+            "methods": ["GET"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "name": {
+                            "required": false,
+                            "description": "Tên đăng kí duy nhất cho block.",
+                            "type": "string"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        },
+                        "attributes": {
+                            "required": false,
+                            "default": [],
+                            "description": "Thuộc tính cho block core/block",
+                            "type": "object"
+                        },
+                        "post_id": {
+                            "required": false,
+                            "description": "ID của post context.",
+                            "type": "integer"
+                        }
+                    }
+                }
+            ]
+        },
+        "/wp/v2/block-renderer/(?P\u003Cname\u003Ecore/calendar)": {
+            "namespace": "wp/v2",
+            "methods": ["GET"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "name": {
+                            "required": false,
+                            "description": "Tên đăng kí duy nhất cho block.",
+                            "type": "string"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        },
+                        "attributes": {
+                            "required": false,
+                            "default": [],
+                            "description": "Thuộc tính cho block core/calendar",
+                            "type": "object"
+                        },
+                        "post_id": {
+                            "required": false,
+                            "description": "ID của post context.",
+                            "type": "integer"
+                        }
+                    }
+                }
+            ]
+        },
+        "/wp/v2/block-renderer/(?P\u003Cname\u003Ecore/categories)": {
+            "namespace": "wp/v2",
+            "methods": ["GET"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "name": {
+                            "required": false,
+                            "description": "Tên đăng kí duy nhất cho block.",
+                            "type": "string"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        },
+                        "attributes": {
+                            "required": false,
+                            "default": [],
+                            "description": "Thuộc tính cho block core/categories",
+                            "type": "object"
+                        },
+                        "post_id": {
+                            "required": false,
+                            "description": "ID của post context.",
+                            "type": "integer"
+                        }
+                    }
+                }
+            ]
+        },
+        "/wp/v2/block-renderer/(?P\u003Cname\u003Ecore/latest-comments)": {
+            "namespace": "wp/v2",
+            "methods": ["GET"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "name": {
+                            "required": false,
+                            "description": "Tên đăng kí duy nhất cho block.",
+                            "type": "string"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        },
+                        "attributes": {
+                            "required": false,
+                            "default": [],
+                            "description": "Thuộc tính cho block core/latest-comments",
+                            "type": "object"
+                        },
+                        "post_id": {
+                            "required": false,
+                            "description": "ID của post context.",
+                            "type": "integer"
+                        }
+                    }
+                }
+            ]
+        },
+        "/wp/v2/block-renderer/(?P\u003Cname\u003Ecore/latest-posts)": {
+            "namespace": "wp/v2",
+            "methods": ["GET"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "name": {
+                            "required": false,
+                            "description": "Tên đăng kí duy nhất cho block.",
+                            "type": "string"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        },
+                        "attributes": {
+                            "required": false,
+                            "default": [],
+                            "description": "Thuộc tính cho block core/latest-posts",
+                            "type": "object"
+                        },
+                        "post_id": {
+                            "required": false,
+                            "description": "ID của post context.",
+                            "type": "integer"
+                        }
+                    }
+                }
+            ]
+        },
+        "/wp/v2/block-renderer/(?P\u003Cname\u003Ecore/rss)": {
+            "namespace": "wp/v2",
+            "methods": ["GET"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "name": {
+                            "required": false,
+                            "description": "Tên đăng kí duy nhất cho block.",
+                            "type": "string"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        },
+                        "attributes": {
+                            "required": false,
+                            "default": [],
+                            "description": "Thuộc tính cho block core/rss",
+                            "type": "object"
+                        },
+                        "post_id": {
+                            "required": false,
+                            "description": "ID của post context.",
+                            "type": "integer"
+                        }
+                    }
+                }
+            ]
+        },
+        "/wp/v2/block-renderer/(?P\u003Cname\u003Ecore/search)": {
+            "namespace": "wp/v2",
+            "methods": ["GET"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "name": {
+                            "required": false,
+                            "description": "Tên đăng kí duy nhất cho block.",
+                            "type": "string"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        },
+                        "attributes": {
+                            "required": false,
+                            "default": [],
+                            "description": "Thuộc tính cho block core/search",
+                            "type": "object"
+                        },
+                        "post_id": {
+                            "required": false,
+                            "description": "ID của post context.",
+                            "type": "integer"
+                        }
+                    }
+                }
+            ]
+        },
+        "/wp/v2/block-renderer/(?P\u003Cname\u003Ecore/shortcode)": {
+            "namespace": "wp/v2",
+            "methods": ["GET"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "name": {
+                            "required": false,
+                            "description": "Tên đăng kí duy nhất cho block.",
+                            "type": "string"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        },
+                        "attributes": {
+                            "required": false,
+                            "default": [],
+                            "description": "Thuộc tính cho block core/shortcode",
+                            "type": "object"
+                        },
+                        "post_id": {
+                            "required": false,
+                            "description": "ID của post context.",
+                            "type": "integer"
+                        }
+                    }
+                }
+            ]
+        },
+        "/wp/v2/block-renderer/(?P\u003Cname\u003Ecore/social-link)": {
+            "namespace": "wp/v2",
+            "methods": ["GET"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "name": {
+                            "required": false,
+                            "description": "Tên đăng kí duy nhất cho block.",
+                            "type": "string"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        },
+                        "attributes": {
+                            "required": false,
+                            "default": [],
+                            "description": "Thuộc tính cho block core/social-link",
+                            "type": "object"
+                        },
+                        "post_id": {
+                            "required": false,
+                            "description": "ID của post context.",
+                            "type": "integer"
+                        }
+                    }
+                }
+            ]
+        },
+        "/wp/v2/block-renderer/(?P\u003Cname\u003Ecore/tag-cloud)": {
+            "namespace": "wp/v2",
+            "methods": ["GET"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "name": {
+                            "required": false,
+                            "description": "Tên đăng kí duy nhất cho block.",
+                            "type": "string"
+                        },
+                        "context": {
+                            "required": false,
+                            "default": "view",
+                            "enum": ["edit"],
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        },
+                        "attributes": {
+                            "required": false,
+                            "default": [],
+                            "description": "Thuộc tính cho block core/tag-cloud",
+                            "type": "object"
+                        },
+                        "post_id": {
+                            "required": false,
+                            "description": "ID của post context.",
+                            "type": "integer"
+                        }
+                    }
+                }
+            ]
+        },
+        "/wp/v2/settings": {
+            "namespace": "wp/v2",
+            "methods": ["GET", "POST", "PUT", "PATCH"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": []
+                },
+                {
+                    "methods": ["POST", "PUT", "PATCH"],
+                    "args": {
+                        "title": {
+                            "required": false,
+                            "description": "Tên website.",
+                            "type": "string"
+                        },
+                        "description": {
+                            "required": false,
+                            "description": "Khẩu hiệu của website.",
+                            "type": "string"
+                        },
+                        "url": {
+                            "required": false,
+                            "description": "Đường dẫn của trang",
+                            "type": "string"
+                        },
+                        "email": {
+                            "required": false,
+                            "description": "Địa chỉ này được dùng cho các mục đích liên quan đến quản trị viên, ví dụ như thông báo có người dùng mới.",
+                            "type": "string"
+                        },
+                        "timezone": {
+                            "required": false,
+                            "description": "Một thành phố chung múi giờ với bạn.",
+                            "type": "string"
+                        },
+                        "date_format": {
+                            "required": false,
+                            "description": "Định dạng ngày cho tất cả các chuỗi ngày tháng.",
+                            "type": "string"
+                        },
+                        "time_format": {
+                            "required": false,
+                            "description": "Định dạng thời gian cho tất cả các chuỗi thời gian.",
+                            "type": "string"
+                        },
+                        "start_of_week": {
+                            "required": false,
+                            "description": "Ngày (thứ) bắt đầu trong tuần.",
+                            "type": "integer"
+                        },
+                        "language": {
+                            "required": false,
+                            "description": "Mã quốc gia WordPress.",
+                            "type": "string"
+                        },
+                        "use_smilies": {
+                            "required": false,
+                            "description": "Chuyển biểu tượng cảm xúc như :-) và :-P thành đồ họa khi hiển thị.",
+                            "type": "boolean"
+                        },
+                        "default_category": {
+                            "required": false,
+                            "description": "Chuyên mục mặc định cho bài viết.",
+                            "type": "integer"
+                        },
+                        "default_post_format": {
+                            "required": false,
+                            "description": "Bài định dạng mặc định.",
+                            "type": "string"
+                        },
+                        "posts_per_page": {
+                            "required": false,
+                            "description": "Những trang blog được hiển thị nhiều nhất.",
+                            "type": "integer"
+                        },
+                        "default_ping_status": {
+                            "required": false,
+                            "enum": ["open", "closed"],
+                            "description": "Cho phép thông báo liên kết (pingback và trackback) từ các blog khác trên các bài viết mới.",
+                            "type": "string"
+                        },
+                        "default_comment_status": {
+                            "required": false,
+                            "enum": ["open", "closed"],
+                            "description": "Cho phép mọi người gửi bình luận về bài viết mới.",
+                            "type": "string"
+                        }
+                    }
+                }
+            ],
+            "_links": {
+                "self": [
+                    {
+                        "href": "https://builder.simplepage.vn/wp-json/wp/v2/settings"
+                    }
+                ]
+            }
+        },
+        "/wp/v2/themes": {
+            "namespace": "wp/v2",
+            "methods": ["GET"],
+            "endpoints": [
+                {
+                    "methods": ["GET"],
+                    "args": {
+                        "context": {
+                            "required": false,
+                            "description": "Scope của request; quyết định trường nào sẽ được trả về ở response.",
+                            "type": "string"
+                        },
+                        "page": {
+                            "required": false,
+                            "default": 1,
+                            "description": "Trang hiện tại của bộ sưu tập.",
+                            "type": "integer"
+                        },
+                        "per_page": {
+                            "required": false,
+                            "default": 10,
+                            "description": "Số lượng kết quả được trả về một lần.",
+                            "type": "integer"
+                        },
+                        "search": {
+                            "required": false,
+                            "description": "Giới hạn kết quả phù hợp trong một chuỗi.",
+                            "type": "string"
+                        },
+                        "status": {
+                            "required": true,
+                            "description": "Giới hạn kết quả được đặt cho giao diện được gán một hoặc nhiều trạng thái.",
+                            "type": "array",
+                            "items": {
+                                "enum": ["active"],
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            ],
+            "_links": {
+                "self": [
+                    {
+                        "href": "https://builder.simplepage.vn/wp-json/wp/v2/themes"
+                    }
+                ]
+            }
+        }
+    },
+    "_links": {
+        "help": [
+            {
+                "href": "http://v2.wp-api.org/"
+            }
+        ]
+    }
+}

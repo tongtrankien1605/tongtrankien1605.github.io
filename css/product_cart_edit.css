@@ -1,0 +1,335 @@
+/** BEGIN LIST PRODUCT *==========================================================================**/
+.swp-on-off-edit {
+    display: none;
+}
+
+.elementor-control .elementor-control-swp-alignment-product-name .elementor-control-type-choose .elementor-label-inline .elementor-control-separator-default {
+    display: none !important;
+}
+.swp_hide_control_manager {
+    display: none !important;
+}
+
+.swp-modal-edit {
+    position: fixed;
+    display: grid;
+    place-items: center;
+    pointer-events: none;
+    opacity: 0;
+    overflow-y: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    transition: all 0.2s ease-out;
+}
+.swp-modal-edit.swp-modal-edit-show {
+    overscroll-behavior-y: contain;
+    pointer-events: unset;
+    opacity: 1;
+    z-index: 10;
+}
+.swp-modal-edit.swp-modal-edit-show .swp-modal-edit-modal__box {
+    opacity: 1;
+    transform: translateY(0);
+}
+.swp-modal-edit-modal__box {
+    background: #fff;
+    color: #544247;
+    line-height: 1.6;
+    width: calc(100% - 150px);
+    opacity: 0;
+    margin: 2rem;
+    padding: 2rem;
+    transform: translateY(4rem);
+    transition: all 0.3s ease-out;
+    border-radius: 10px;
+}
+
+.swp-modal-edit-header {
+    border-bottom: solid 1px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+}
+.swp-modal-edit-header-title {
+    font-weight: 700;
+    font-size: 1.5em;
+}
+.swp-modal-edit-header-title:after {
+    content: 'Giá» hĂ ng cá»§a báº¡n';
+}
+
+.swp-modal-edit-header .swp-modal-edit-header-close {
+    position: absolute;
+    right: -35px;
+    top: -35px;
+    text-transform: none;
+    padding: 5px 10px 5px 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    color: #fff;
+    background: red;
+    text-decoration: none;
+}
+.swp-modal-edit-header-close:hover {
+    text-decoration: none;
+}
+
+.swp-modal-edit-content {}
+
+.swp-edit {
+    border: solid 1px red;
+}
+
+.hover {
+    /*background-color: deeppink;*/
+    cursor: pointer;
+    outline: 0;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    border: #0C61F2 dashed 1px !important;
+}
+
+.hover-click {
+    /*background-color: deeppink;*/
+    cursor: pointer;
+    outline: 0;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    border: #0C61F2 dashed 1px !important;
+}
+
+.popover {
+    height: 37px;
+    background: rgba(93,93,93,.79);
+    border-radius: 5px;
+    position: absolute;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+    z-index: 40050;
+    box-shadow: 0 5px 19px rgba(6,21,40,.3);
+    background: #fff;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    /*top: -5px !important;*/
+}
+
+.popover_edit_text {
+    height: auto;
+    background: rgba(93,93,93,.79);
+    border-radius: 5px;
+    position: absolute;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+    z-index: 999999;
+    box-shadow: 0 5px 19px rgba(6,21,40,.3);
+    background: #fff;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    top: 0 !important;
+}
+
+/* .{
+    height: 200px;
+} */
+
+.popover:not(.is-active) {
+    left: -9999em !important;
+    top: -9999em !important;
+}
+
+.popover.is-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.swp-popover-edit-list-product-name {
+    height: 58px;
+    width: 58px;
+    border: solid 1px #ccc;
+    float: left;
+    text-align: center;
+    line-height: 2.7;
+}
+
+.swp-popover-edit-header-close {
+    float: right;
+    font-size: 11px;
+}
+
+.swp_popover_edit_font_close {
+    float: right;
+    font-size: 11px;
+}
+
+.swp-edit-cus-el-alignment {
+    height: 37px !important;
+}
+
+.swp-edit-cus-el-alignment-option {
+    margin: 0;
+    line-height: 3;
+    width: 50px !important;
+}
+
+
+.swp-choose-select-font-family {
+    height: 100%;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 34px !important;
+}
+
+.select2-container .select2-selection--single {
+    height: 100% !important;
+    line-height: 2 !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 34px !important;
+}
+
+[type='color'] {
+    -moz-appearance: none !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    padding: 0 !important;
+    width: 15px !important;
+    height: 15px !important;
+    border: none !important;
+}
+
+[type='color']::-webkit-color-swatch-wrapper {
+    padding: 0 !important;
+}
+
+[type='color']::-webkit-color-swatch {
+    border: none !important;
+}
+
+.color-picker {
+    padding: 10px;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    background-color: #f8f9f9;
+}
+
+
+.mainmenu, .submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* make ALL links (main and submenu) have padding and background color */
+.mainmenu a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    color: #000;
+    cursor: pointer;
+}
+
+.swp-text-decoration-active {
+    color: dodgerblue !important
+}
+.swp-text-active {
+    color: dodgerblue !important
+}
+
+/* add hover behaviour */
+.mainmenu a:hover {
+    background-color: #C5C5C5;
+}
+
+
+/* when hovering over a .mainmenu item,
+  display the submenu inside it.
+  we're changing the submenu's max-height from 0 to 200px;
+*/
+
+.mainmenu li:hover .submenu {
+    display: block;
+    max-height: 200px;
+}
+
+/*
+  we now overwrite the background-color for .submenu links only.
+  CSS reads down the page, so code at the bottom will overwrite the code at the top.
+*/
+
+.submenu a {
+    background-color: #999;
+}
+
+/* hover behaviour for links inside .submenu */
+.submenu a:hover {
+    background-color: #666;
+}
+
+/* this is the initial state of all submenus.
+  we set it to max-height: 0, and hide the overflowed content.
+*/
+.submenu {
+    overflow: hidden;
+    max-height: 0;
+    -webkit-transition: all 0.5s ease-out;
+}
+
+.swp-text-format {
+    border: none;
+    background:white;
+    color: black;
+}
+
+.swp-text-format:hover {
+    background: #ccc;
+}
+
+.swp-text-format.swp-text-format-active {
+    color: white;
+    background: gray;
+}
+
+.swp-text-underline {
+    border: none;
+    background:white;
+    color: black;
+}
+
+.swp-text-underline:hover {
+    background: #ccc;
+    border: none;
+}
+
+.swp-text-underline.swp-text-underline-active {
+    color: white;
+    background: gray;
+    border: none;
+}
+
+.swp-choose-select-font-family {
+    font-size: 0.8em;
+}
+
+.select2-results__options {
+    font-size: 15px !important;
+}

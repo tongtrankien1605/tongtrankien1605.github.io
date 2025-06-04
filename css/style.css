@@ -1,0 +1,49 @@
+/*
+Theme Name: Twenty Twenty Child
+Template: twentytwenty
+*/
+
+.elementor-add-new-section .elementor-add-envato-button,
+#elementor-notice-bar,
+#elementor-try-safe-mode {
+    display: none !important;
+}
+
+body section {
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+.alert-success a {
+    color: #25920a;
+}
+.elementor-form-fields-wrapper .elementor-field-type-checkbox .elementor-field-subgroup .elementor-field-option input {
+    display: inline-block;
+}
+.elementor img {
+    display: inline;
+}
+.elementor p {
+    margin-bottom: 0;
+    line-height: inherit;
+}
+.elementor li {
+    margin: 0;
+    line-height: inherit;
+}
+.elementor-fit-aspect-ratio video {
+    width: 100% !important;
+}
+
+.formResult iframe {
+    width: 100% !important;
+}
+
+.bdt-custom-carousel .swiper-container .bdt-custom-carousel-item .elementor-invisible {
+    visibility: visible;
+}
+
+.grecaptcha-badge {
+    visibility: hidden;
+}
